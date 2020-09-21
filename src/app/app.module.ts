@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmisoraComponent } from './shared/emisora/emisora.component';
+import { NavComponent } from './shared/nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmisoraComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
