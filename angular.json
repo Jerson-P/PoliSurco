@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "POLISURCOSAS"
+    }
+  },
+  "defaultProject": "POLISURCOSAS",
+  "cli": {
+    "analytics": false
+  }
 }
