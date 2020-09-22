@@ -7,6 +7,7 @@ import { EmisoraComponent } from './shared/emisora/emisora.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { AdmisionesComponent } from './pages/admisiones/admisiones.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     EmisoraComponent,
     NavComponent,
     FooterComponent,
-    InicioComponent
+    InicioComponent,
+    AdmisionesComponent
   ],
   imports: [
     BrowserModule,
