@@ -9,6 +9,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { AdmisionesComponent } from './pages/admisiones/admisiones.component';
 import { AcademicaComponent } from './pages/academica/academica.component';
+import { ElpoliComponent } from './pages/elpoli/elpoli.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AcademicaComponent } from './pages/academica/academica.component';
     FooterComponent,
     InicioComponent,
     AdmisionesComponent,
-    AcademicaComponent
+    AcademicaComponent,
+    ElpoliComponent
   ],
   imports: [
     BrowserModule,
