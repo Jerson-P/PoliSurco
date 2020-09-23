@@ -3,6 +3,28 @@
     <!--Collapsible Admisiones-->
     <ul class="collapsible popout">
 
+        <!--REQUISITOS-->
+        <li class="active">
+            <div class="collapsible-header">
+                <i class="material-icons">border_color</i>
+                <h4>Requisitos</h4>
+            </div>
+            <div class="collapsible-body">
+
+                 <!--TABLA REQUISITOS-->
+               <div class="card">
+                    <div class="card-content">
+                     <h5>Nombre</h5>
+                      <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
+                          inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
+                          non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
+                          et debitis, illo omnis itaque.
+                        </blockquote>
+                    </div>
+               </div>
+            </div>
+        </li>
+
         <!--FORMULARIO ADMISIONES-->
         <li>
             <div class="collapsible-header">
@@ -10,28 +32,29 @@
                 <h4>Formulario Admisiones</h4>
             </div>
             <div class="collapsible-body">
-
                 <!--tabla de Descargar-->
                <ul>
                 <div class="card">
                     <div class="card-tabs">
                         <ul class="tabs tabs-fixed-width">
-                          <li class="tab"><a class="active" href="#semestres-tec">Descargar</a></li>
+                          <li class="tab"><a class="active" href="#admi">Descargar o llenar en linea</a></li>
                         </ul>
                       </div>
                       <div class="card-content grey lighten-4">
-                        <div id="semestres-tec">
-                            <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                                inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                                non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                                et debitis, illo omnis itaque.
+                        <div id="admi">
+                            <blockquote>Tienes dos opciones. <br>
+                                - Descarga el formulario para que lo imprimas y lo lleves a nuestras oficinas. <br>
+                                - LLena el formulario en linea y abjunta los demás requisitos a traves de nuestra web.
                               </blockquote>
-
-                            <a href="../pdfs/reporte2-05-10.pdf" download="Reporte2Mayo2010">
+                            <a  class="waves-effect waves-teal btn" 
+                            href="../pdfs/reporte2-05-10.pdf" download="Reporte2Mayo2010">
                             Descargar Archivo
                             </a> 
+                            &nbsp;
+                            <a class="waves-effect waves-teal btn right modal-trigger" href="#linea">
+                                LLenar en linea
+                            </a>
                         </div>
-                        
                       </div>
                   </div>
                 </ul>
@@ -105,27 +128,18 @@
                </div>
             </div>
         </li>
-         <!--REQUISITOS-->
-         <li>
-            <div class="collapsible-header">
-                <i class="material-icons">border_color</i>
-                <h4>Requisitos</h4>
-            </div>
-            <div class="collapsible-body">
-
-                 <!--TABLA REQUISITOS-->
-               <div class="card">
-                    <div class="card-content">
-                     <h5>Nombre</h5>
-                      <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                          inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                          non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                          et debitis, illo omnis itaque.
-                        </blockquote>
-                    </div>
-               </div>
-            </div>
-        </li>
+         
        
     </ul>
+</div>
+
+<!--MODAL FORMULARIO EN LINEA-->
+<div id="linea" class="modal">
+    <div class="modal-content">
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/forms/u/2/d/e/1FAIpQLSfz3suJUQnHGPjA07en-THpc8zVIniXgvpC378k2zznvEyvNQ/viewform" 
+            frameborder="0" id="formulario-admisiones">
+        </iframe>
+        </div>
+    </div>
 </div>
