@@ -8,6 +8,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { AdmisionesComponent } from './pages/admisiones/admisiones.component';
+import { AcademicaComponent } from './pages/academica/academica.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AdmisionesComponent } from './pages/admisiones/admisiones.component';
     NavComponent,
     FooterComponent,
     InicioComponent,
-    AdmisionesComponent
+    AdmisionesComponent,
+    AcademicaComponent
   ],
   imports: [
     BrowserModule,

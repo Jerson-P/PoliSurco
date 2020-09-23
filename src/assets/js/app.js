@@ -64,4 +64,7 @@
     $('.tooltipped').trigger('needs click');
   });
   
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
 
