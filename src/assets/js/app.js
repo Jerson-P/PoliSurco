@@ -68,3 +68,7 @@
     $('.collapsible').collapsible();
   });
 
+  $(document).ready(function(){
+    $('.tabs').tabs();
+  });
+
