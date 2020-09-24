@@ -9,7 +9,7 @@
            </a>
            <a class="carousel-item" id="imgPro" target="_blank" 
                href="https://wa.me/573214544853?text=Quiero%20una%20opción%20de%20Amor">
-               <img src="https://cdn.pixabay.com/photo/2014/05/03/00/46/notebook-336634_960_720.jpg">
+               <img src="https://lorempixel.com/250/250/nature/2">
            </a>
            <a class="carousel-item" id="imgPro" target="_blank" 
                href="https://wa.me/573214544853?text=Quiero%20una%20opción%20de%20Amor">
@@ -78,18 +78,9 @@
                       <label for="nombre-inicio">Nombre</label>
                   </div>
                   <div class="input-field col s6">
-                      <i class="material-icons prefix">check_box</i>
-                      <select required id="programa-inicio">
-                        <optgroup label="team 1">
-                          <option value="1">Option 1</option>
-                          <option value="2">Option 2</option>
-                        </optgroup>
-                        <optgroup label="team 2">
-                          <option value="3">Option 3</option>
-                          <option value="4">Option 4</option>
-                        </optgroup>
-                      </select>
-                      <label>Programa de interes</label>
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="text" id="programa-con" class="autocomplete" required autofocus>
+                    <label for="programa-con">Programa de Interes</label>
                   </div>
                 </div>
             </div>
@@ -139,7 +130,8 @@
 </div>
 <div id="cajacookies"> 
     <p>
-    <button onclick="aceptarCookies()" class="pull-right">
+        <!-- onclick="aceptarCookies()" -->
+    <button id="cookies" class="pull-right">
     <i class="fa fa-times"></i> Aceptar y cerrar éste mensaje
     </button> Éste sitio web usa cookies, si permanece aquí acepta su uso. Puede leer más sobre el uso de cookies 
     en nuestra <a href="politica.html">política de privacidad</a>. 
