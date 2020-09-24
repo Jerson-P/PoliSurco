@@ -10,6 +10,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { AdmisionesComponent } from './pages/admisiones/admisiones.component';
 import { AcademicaComponent } from './pages/academica/academica.component';
 import { ElpoliComponent } from './pages/elpoli/elpoli.component';
+import { ContactosComponent } from './pages/contactos/contactos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ElpoliComponent } from './pages/elpoli/elpoli.component';
     InicioComponent,
     AdmisionesComponent,
     AcademicaComponent,
-    ElpoliComponent
+    ElpoliComponent,
+    ContactosComponent
   ],
   imports: [
     BrowserModule,
