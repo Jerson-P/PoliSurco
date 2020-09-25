@@ -9,11 +9,7 @@ h1 {
 }
    
 .grdp {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  width: 65%;
-  z-index: 100000;
+  text-align: center;
   border: 6px #dedddd solid;
   text-align: justify;
 }
@@ -24,4 +20,13 @@ h1 {
 .alert{
   background-color: #dedddd;
   
+}
+div.alert.alert-warning.grdp{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 32px;
+  border-radius: 8px;
+  transition: 400ms;
 }
