@@ -1,19 +1,19 @@
 <!--HEARD -->
 <app-emisora></app-emisora>
-
 <!--Browser-->
 <app-nav></app-nav>
-
-<!--Start-->
-<!--<app-inicio></app-inicio>
-<app-academica></app-academica>
-<app-admisiones></app-admisiones>
-<app-elpoli></app-elpoli>-->
-<app-contactos></app-contactos>
-
-
-
+<!--router-->
+<router-outlet></router-outlet>
+<div class="alert alert-warning grdp" role="alert" [hidden]="!visible">
+  <p>
+    <strong>GDPR (General Data Protection Regulation - Reglamento General Protección de Datos)</strong>
+     <br>
+     Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarte publicidad relacionada con tus preferencias mediante el análisis de tus hábitos de navegación.
+     Puede obtener más información en nuestra <a href="">Política de Cookies.</a>
+     Pulse el botón ACEPTAR, para confirmar que ha leído y aceptado la información presentada. Después de aceptar no volveremos a mostrar este mensaje.
+  </p>
+  <button type="button" class="btn btn-success bcgrdp" (click)="onGRDP()">Aceptar</button>
+</div>
 <!--FOOTER-->
 <app-footer></app-footer>
 
-<router-outlet></router-outlet>

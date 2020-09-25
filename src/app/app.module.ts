@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CookieService} from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { AdmisionesComponent } from './pages/admisiones/admisiones.component';
 import { AcademicaComponent } from './pages/academica/academica.component';
 import { ElpoliComponent } from './pages/elpoli/elpoli.component';
 import { ContactosComponent } from './pages/contactos/contactos.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { ContactosComponent } from './pages/contactos/contactos.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

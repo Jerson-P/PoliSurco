@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as M  from '../../../assets/materialize/js/materialize.js';
 
 @Component({
   selector: 'app-nav',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  options = {}
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, this.options);
   }
 
 }
