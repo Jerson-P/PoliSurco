@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit} from '@angular/core';
 import * as M  from '../../../assets/materialize/js/materialize.js';
+declare var $: any;
+
 
 @Component({
   selector: 'app-inicio',
@@ -13,7 +15,6 @@ export class InicioComponent implements OnInit, AfterViewInit {
     duration: 1000,
     
   };
-  
 
   constructor() { 
     
@@ -23,26 +24,16 @@ export class InicioComponent implements OnInit, AfterViewInit {
     let slider = M.Slider.init(document.querySelectorAll('.slider'), {} );
     let parallax = M.Parallax.init(document.querySelectorAll('.parallax'), {});
     let autocomplete = M.Autocomplete.init(document.querySelectorAll('.autocomplete'), {
-      data: {
-        
-      }
+      data: { }
     });
   }
 
   ngOnInit(): void {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, this.options);
-    
-    // var instance = M.Carousel.getInstance(elems);
-    
-
-    // autoPlay();
-    
-    // function autoPlay() {
-    //   instances.next();
-    //   setTimeout(autoPlay, 4500);
-      
-    // }
+    let elems = document.querySelectorAll('.carousel');
+    let instances = M.Carousel.init(elems, this.options);
+    setInterval(function(){
+      $('.carousel').carousel('next');
+    }, 8000);
     
   }
 
