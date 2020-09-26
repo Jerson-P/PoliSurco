@@ -1,9 +1,10 @@
-<!--HEARD -->
+<!--HEADER-->
 <app-emisora></app-emisora>
 <!--Browser-->
 <app-nav></app-nav>
 <!--router-->
 <router-outlet></router-outlet>
+<!--COOKIES-->
 <div class="alert alert-warning grdp" role="alert" [hidden]="!visible">
   <p>
     <strong>GDPR (General Data Protection Regulation - Reglamento General Protección de Datos)</strong>
@@ -14,5 +15,15 @@
   </p>
   <button type="button" class="btn btn-success bcgrdp" (click)="onGRDP()">Aceptar</button>
 </div>
+ <!--Botón whatsapp-->
+ <div class="fixed-action-btn">
+    <a href="https://wa.me/573235747527?text=Me%20Interesa%20Realizar%20Mis%20Estudios%20En%20El%20Polisurco" 
+    class="btn-floating btn-large pulse" 
+    id="cDos" target="_blank">
+    <i class="large material-icons"><img src="../../../assets/img/wh.png" alt="Wh"></i> 
+    </a>
+    <ul>
+    </ul>
+  </div> 
 <!--FOOTER-->
 <app-footer></app-footer>
