@@ -26,6 +26,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
     let autocomplete = M.Autocomplete.init(document.querySelectorAll('.autocomplete'), {
       data: { }
     });
+
   }
 
   ngOnInit(): void {
@@ -33,7 +34,8 @@ export class InicioComponent implements OnInit, AfterViewInit {
     let instances = M.Carousel.init(elems, this.options);
     setInterval(function(){
       $('.carousel').carousel('next');
-    }, 8000);
+    }, 10000);
+    
     
   }
 
