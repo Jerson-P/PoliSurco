@@ -1,7 +1,7 @@
 # Descripción
 ¿Quá a cambiado?
 - [ ] Frontend
-- [ ] Backend
+- [ ] Backend as a Serive
 - [ ] Deploy
 
 # ¿Qúe componente es?
