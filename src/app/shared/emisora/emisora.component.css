@@ -12,7 +12,7 @@ transform: scale(1.05);
 }
 audio
 {
-    width: 200px;
+    width: 100%;
 -webkit-transition:all 0.5s linear;
 -moz-transition:all 0.5s linear;
 -o-transition:all 0.5s linear;
@@ -30,7 +30,15 @@ h1{
 
 div.col.s12{
     text-align: center;
+    padding-top: 0;
+    margin-top: 0;
     
 }
-
+ul{
+    align-items: center;
+    margin-top: 15%;
+}
+#emisora{
+    margin-top: 4%;
+}
 
