@@ -1,4 +1,4 @@
-<header>
+<header *ngFor="let urls of urlsServicesService.urls">
     <br>
     <div class="container">
         <div class="row">
@@ -13,12 +13,12 @@
            </div>
            <div class="col s12 m4 l4">
             <ul> 
-                <a class="btn-floating pulse" href="https://www.instagram.com/polisurcocartagenadelchaira/?hl=es-la"
+                <a class="btn-floating pulse" href="{{urls.instagram}}"
                 id="cDos" target="_blank"><i class="material-icons">
                     <img src="../../../assets/img/intagram.png" alt="IN"></i>
                 </a>
                 &nbsp;
-                <a class="btn-floating pulse" href="https://www.facebook.com/Polisurco-Cartagena-del-Chair%C3%A1-107507664334060"
+                <a class="btn-floating pulse" href="{{urls.facebook}}"
                 id="cDos" target="_blank"><i class="material-icons">
                     <img src="../../../assets/img/fb.png" alt="FB"></i>
                 </a>
@@ -34,8 +34,9 @@
         <div class="row">
             <div class="col s12">
                 <h1>Politecnico del sur de Colombia S.A.S 
-                <h5> Soluciones Educativas<br>Cartagena del Chairá Caquetá</h5> 
+                <h5> Soluciones Educativas<br>Cartagena del Chairá Caquetá </h5> 
                 </h1>
+                <h6>{{urls.correo}}</h6>
                    
             </div>           
         </div>

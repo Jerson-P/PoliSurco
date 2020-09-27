@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { UrlsServicesService } from './services/urls-services.service';
 
 
 @Component({
@@ -11,7 +12,8 @@ export class AppComponent implements OnInit{
   public title = 'Soluciones Educativas Polisurco SAS Cartagena del Chairá Caquetá';
 
   cookieValue = 'UNKNOWN';
-  constructor( private cookieService: CookieService ) { }
+  constructor( private cookieService: CookieService, 
+                public urlsService: UrlsServicesService) { }
   
 
   ngOnInit(): void {
