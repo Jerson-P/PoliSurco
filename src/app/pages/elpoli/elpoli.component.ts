@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as M  from '../../../assets/materialize/js/materialize.js';
+import { ElpoliService } from '../../services/elpoli.service';
 
 @Component({
   selector: 'app-elpoli',
@@ -8,7 +9,7 @@ import * as M  from '../../../assets/materialize/js/materialize.js';
 })
 export class ElpoliComponent implements OnInit {
 
-  constructor() { }
+  constructor( public elpoli: ElpoliService ) { }
 
   ngOnInit(): void {
     let instances = M.Collapsible.init(document.querySelectorAll('.collapsible'), {} );
