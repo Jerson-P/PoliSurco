@@ -21,11 +21,7 @@ export class UrlsServicesService {
     // .subscribe(val => console.log(val));
     return this.firestore.collection('urls').valueChanges()
             .subscribe( (resp: any[]) => {
-              console.log(resp);
               this.urls =  resp;
-              this.urls.forEach(element => {
-                console.log(element);
-              });
             });
   }
 }
