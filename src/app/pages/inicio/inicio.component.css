@@ -5,3 +5,7 @@ imgPro{
 .slides li img {
     background-attachment: fixed;
 }
+svg path,
+svg rect{
+    fill: black;
+}
