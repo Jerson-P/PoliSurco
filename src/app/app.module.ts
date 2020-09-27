@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CookieService} from 'ngx-cookie-service';
 
+//Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmisoraComponent } from './shared/emisora/emisora.component';
@@ -13,6 +18,9 @@ import { AcademicaComponent } from './pages/academica/academica.component';
 import { ElpoliComponent } from './pages/elpoli/elpoli.component';
 import { ContactosComponent } from './pages/contactos/contactos.component';
 import { from } from 'rxjs';
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +36,9 @@ import { from } from 'rxjs';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

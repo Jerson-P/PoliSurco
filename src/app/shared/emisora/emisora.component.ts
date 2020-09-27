@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { UrlsInterface } from '../../models/urls.interface';
+import { UrlsServicesService } from '../../services/urls-services.service';
+
+
 
 @Component({
   selector: 'app-emisora',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmisoraComponent implements OnInit {
 
-  constructor() { }
+ 
+
+  constructor( public urlsServicesService: UrlsServicesService) { }
 
   ngOnInit(): void {
-  }
 
+  }
+  
+  
 }
