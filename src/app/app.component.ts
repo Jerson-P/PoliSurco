@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { UrlsServicesService } from './services/urls-services.service';
+import { BannerService } from './services/banner.service';
 
 
 @Component({

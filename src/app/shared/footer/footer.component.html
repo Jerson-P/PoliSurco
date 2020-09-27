@@ -1,24 +1,24 @@
 <!--Sección footer-->
      
-<footer class="page-footer" id="cUno">
+<footer class="page-footer" id="cUno" *ngFor="let urls of url.urls">
     <div class="container">
       <div class="row">
         <div class="col s12 m4 l4">
           <h5 class="white-text" id="Contactos">Contactos</h5>
           <p class="grey-text text-lighten-4">Si necesitas más información comunicate al los números: <br> 
             323 5747 527 -  318 5726 638 <br> 
-            o los correo: solucionespolisurco@gmail.com <br> institucional
+            o los correo: {{urls.correo}} <br> institucional
             </p>
         </div>
         <div class="col s12 m4 l4">            
           <h5 class="white-text">Redes sociales</h5>
           <ul> 
-            <a class="btn-floating pulse" href="https://www.instagram.com/polisurcocartagenadelchaira/?hl=es-la"
+            <a class="btn-floating pulse" href="{{urls.instagram}}"
             id="cDos" target="_blank"><i class="material-icons">
                 <img src="../../../assets/img/intagram.png" alt="IN"></i>
             </a>
             &nbsp;
-            <a class="btn-floating pulse" href="https://www.facebook.com/Polisurco-Cartagena-del-Chair%C3%A1-107507664334060"
+            <a class="btn-floating pulse" href="{{urls.facebook}}"
             id="cDos" target="_blank"><i class="material-icons">
                 <img src="../../../assets/img/fb.png" alt="FB"></i>
             </a>
@@ -44,7 +44,7 @@
             © {{year}} Todos los derechos reservados.
           </div>
           <div class="col s12 m6 l3">
-            <a href="https://github.com/crojastriana3?tab=repositories"
+            <a href="{{urls.desarrolladores}}"
             class="waves-effect waves-light" target="_blank"><b>By Hornet</b></a>
            </div>
         </div>
