@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CookieService} from 'ngx-cookie-service';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 
+
 //Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
