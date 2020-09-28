@@ -4,7 +4,7 @@
     <ul class="collapsible popout">
 
         <!--REQUISITOS-->
-        <li class="active">
+        <li>
             <div class="collapsible-header">
                 <i class="material-icons">border_color</i>
                 <h4>Requisitos</h4>
@@ -12,14 +12,9 @@
             <div class="collapsible-body">
 
                  <!--TABLA REQUISITOS-->
-               <div class="card">
-                    <div class="card-content">
-                     <h5>Nombre</h5>
-                      <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                          inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                          non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                          et debitis, illo omnis itaque.
-                        </blockquote>
+               <div class="card" >
+                    <div class="card-content" *ngFor="let r of requisitos.r">
+                      <blockquote>{{r.requisito}}</blockquote>
                     </div>
                </div>
             </div>
