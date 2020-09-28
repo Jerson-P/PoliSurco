@@ -70,19 +70,23 @@
 </div>
 
 
-<!--Section news and slider-->
-<div class="slider">
-    <ul class="slides">
-        <li>
-            <img class="responsive-img" src="https://firebasestorage.googleapis.com/v0/b/polisurco-sas.appspot.com/o/code.png?alt=media&token=02c98d76-0214-4f5c-8ab5-770b5e99a6f3"> 
-            <div class="caption center-align">
-                <h3 class="purple-text text-darken-5">This is our big Tagline!</h3>
-                <h5 class="indigo-text text-accent-3">Here's our small slogan.</h5>
+<!--Section news and slider class="slider" class="slides"-->
+<div class="contenedor" >
+    <ul>
+        <li *ngFor="let n of urlsBanner.noticias"> <!--class="responsive-img"-->
+            <div>
+                <img class="responsive-img" [src]="n.url" alt="noticias"> 
+            <div class="texto-encima">
+                <h5 class="purple-text text-darken-5">{{n.titulo}}</h5>
               </div>
+              <div class="centrado">
+                <p class="indigo-text text-accent-3">{{n.parrafo}}</p>
+              </div>
+            </div>
           </li>
     </ul>
   </div>
-
+  
 
 <!--Section Contact Form-->
 
@@ -90,6 +94,9 @@
     <div class="section">
         <div class="row">
             <div class="col s12">
+                <blockquote style="text-align: center;">
+                    <h5><b>CONTACTANOS</b></h5>
+                </blockquote>
                 <div class="row">
                   <div class="input-field col s6">
                       <i class="material-icons prefix">account_circle</i>

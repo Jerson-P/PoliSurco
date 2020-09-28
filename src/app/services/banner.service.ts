@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BannerInterface } from '../models/banner.interface';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { NoticiasInterface } from '../models/noticias.interface';
 
 
 @Injectable({
@@ -9,10 +10,12 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class BannerService {
 
   urls: BannerInterface[] = [];
+  noticias: NoticiasInterface[] = [];
   cargando =  true;
 
   constructor( private db:AngularFirestore) {  
     this.getBanner();
+    this.getNoticias();
 
   }
 
@@ -26,5 +29,10 @@ export class BannerService {
   //             console.log(this.urls[0]);
   //           });
   // }
+  }
+  getNoticias(){
+    return this.db.collection('noticias-testimonios').valueChanges().subscribe( (resp: any[]) =>{
+      this.noticias = resp;
+    })
   }
 }

@@ -43,7 +43,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
     });
     
     if (!this.urlsBanner.cargando) {
-      let elems = document.querySelectorAll('.carousel');
+    let elems = document.querySelectorAll('.carousel');
     let instances = M.Carousel.init(elems, this.options);
     setInterval(function(){
       $('.carousel').carousel('next');
