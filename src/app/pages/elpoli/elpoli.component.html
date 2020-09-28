@@ -1,83 +1,83 @@
-<!--SOBRE NOSOTROS-->
-<div class="container">
-    <div class="row">
-        <div class="col s12 m12">
-          <div class="card white-grey darken-1">
-            <div class="card-content black-text">
-              <span class="card-title"><h4><b>SOBRE NOSOTROS</b></h4></span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        </div>
-    </div>
+<!-- Prolader  -->
+<div align="center" *ngIf="elpoli.cargando">
+  <h5>Cargando...</h5>
+  <div class="loader loader--style1" title="0">
+    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+    <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+      s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+      c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+    <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+      C22.32,8.481,24.301,9.057,26.013,10.047z">
+      <animateTransform attributeType="xml"
+        attributeName="transform"
+        type="rotate"
+        from="0 20 20"
+        to="360 20 20"
+        dur="0.5s"
+        repeatCount="indefinite"/>
+      </path>
+    </svg>
+  </div>
+  <p>Espere porfavor</p>
 </div>
 
-<div class="container">
-
+<div class="container" >
   <!--Collapsible el poli-->
   <ul class="collapsible popout">
-
+    <!--Sobre Nosotros class="active"-->
+    <li *ngFor="let items of elpoli.elPoli" >
+      <div class="collapsible-header">
+        <i class="material-icons">bookmark</i>
+        <h4><b>Sobre nosotros</b></h4>
+      </div>
+      <div class="collapsible-body">
+       <blockquote>{{items.presentacion}}</blockquote>
+      </div>
+    </li>
     <!--QUIENES SOMOS-->
-    <li>
+    <li *ngFor="let items of elpoli.elPoli" >
       <div class="collapsible-header">
           <i class="material-icons">bookmark</i>
           <h4><b>Quienes somos</b></h4>
       </div>
       <div class="collapsible-body">
-
           <!--TABLA QUIENES SOMOS-->
         <ul>
           <div class="card">
               <div class="card-content">
               <h5><b>Mision</b></h5>
-                <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                    inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                    non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                    et debitis, illo omnis itaque.
-                  </blockquote>
+                <blockquote>{{items.mision}}</blockquote>
               </div>
               <div class="card-content">
                 <h5><b>Vision</b></h5>
-                  <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                      inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                      non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                      et debitis, illo omnis itaque.
-                    </blockquote>
+                  <blockquote>{{items.vision}}</blockquote>
               </div>
               <div class="card-content">
                 <h5><b>Historia</b></h5>
-                  <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                      inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                      non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                      et debitis, illo omnis itaque.
-                    </blockquote>
+                  <blockquote>{{items.historia}}</blockquote>
               </div>
             </div>
           </ul>
       </div>
     </li>
-
     <!--SIMBOLOS-->
-
-    <li >
+    <li *ngFor="let items of elpoli.elPoli" >
       <div class="collapsible-header">
           <i class="material-icons">beenhere</i>
           <h4><b>Simbolos</b></h4>
       </div>
-
       <!--TABLA SIMBOLOS-->
-
       <div class="collapsible-body">
           <h5><b>Himno</b></h5>
-          <blockquote>Lorem ipsum dolor sit amet consectetur.</blockquote>
+          <blockquote>{{items.himno}}</blockquote>
 
           <div class="row">
             <div class="col s12 m5">
               <div class="card">
                 <div class="card-image">
-                  <img src="images/sample-1.jpg">
-                  <span class="card-title">Card Title</span>
+                  <img [src]="items.escudo">
+                  <span class="card-title">Escudo</span>
                 </div>
               </div>  
             </div>
@@ -86,8 +86,8 @@
             <div class="col s12 m5">
               <div class="card">
                 <div class="card-image">
-                  <img src="images/sample-1.jpg">
-                  <span class="card-title">Card Title</span>
+                  <img [src]="items.bandera">
+                  <span class="card-title">Bandera</span>
                 </div>
               </div>  
             </div>
@@ -96,21 +96,17 @@
       </div>  
     </li>
     <!--JURIDICO-->
-
     <li>
       <div class="collapsible-header">
           <i class="material-icons">beenhere</i>
           <h4><b>Juridico</b></h4>
       </div>
-
-      <!--TABLA SIMBOLOS-->
-
       <div class="collapsible-body">
-          <h5><b>Juridico</b></h5>
-          <blockquote>Lorem ipsum dolor sit amet consectetur.</blockquote>
-        
+        <ul *ngFor="let juri of elpoli.juridico">
+          <h6>{{juri.titulo}}</h6>
+          <blockquote>{{juri.parrafo}}</blockquote>
+        </ul>
       </div>  
     </li>
-
   </ul>
   </div>

@@ -22,7 +22,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    let slider = M.Slider.init(document.querySelectorAll('.slider'), {} );
+    let slider = M.Slider.init(document.querySelectorAll('.slider'), this.options );
     let parallax = M.Parallax.init(document.querySelectorAll('.parallax'), {});
     let autocomplete = M.Autocomplete.init(document.querySelectorAll('.autocomplete'), {
       data: { }

@@ -30,3 +30,7 @@ div.alert.alert-warning.grdp{
   border-radius: 8px;
   transition: 400ms;
 }
+svg path,
+svg rect{
+    fill: black;
+}
