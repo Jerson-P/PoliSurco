@@ -15,6 +15,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
     indicators: true,
     duration: 1000,
   };
+  page: number = 1;
   public banners = [];
 
   constructor( public urlsBanner: BannerService) { 
@@ -42,16 +43,14 @@ export class InicioComponent implements OnInit, AfterViewInit {
       })
     });
     
-    if (!this.urlsBanner.cargando) {
-    let elems = document.querySelectorAll('.carousel');
-    let instances = M.Carousel.init(elems, this.options);
-    setInterval(function(){
-      $('.carousel').carousel('next');
-    }, 10000);
+  //   if (!this.urlsBanner.cargando) {
+  //   let elems = document.querySelectorAll('.carousel');
+  //   let instances = M.Carousel.init(elems, this.options);
+  //   setInterval(function(){
+  //     $('.carousel').carousel('next');
+  //   }, 10000);
       
-    }
-
-    
+  //   }
   }
 
 }
