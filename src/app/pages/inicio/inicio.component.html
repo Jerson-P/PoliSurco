@@ -1,5 +1,5 @@
 <!--Section Banner-->
-<div class="row" >
+<div class="row">
 <div class="section">
 
     <!-- Prolader  -->
@@ -25,29 +25,21 @@
         </div>
         <p>Espere porfavor</p>
       </div>
+    
+    <div class="carousel carousel-slider" *ngIf="!urlsBanner.cargando">
+        <a class="carousel-item" *ngFor="let img of banners">
+            <img [src]="img.data.url">
+        </a>
+    </div>
 
-   <div class="container" id="carusel"  *ngIf="!urlsBanner.cargando">
-       <div class="carousel carousel-slider center" >
-            <a *ngFor="let img of banners" class="carousel-item" id="imgPro" target="_blank" href="">
+    
+   <!-- <div class="container" id="carusel"  *ngIf="!urlsBanner.cargando">
+       <div class="carousel center carousel-slider" *ngFor="let img of banners" >
+            <a class="carousel-item" id="imgPro" >
                 <img [src]="img.data.url">
             </a>
-           <!-- <ul *ngFor="let img of banners">
-               <img  [src]="img.data.url" alt="">
-           </ul> -->
-           <!-- <a class="carousel-item" id="imgPro" target="_blank" 
-               href="r">
-               <img src="https://th.bing.com/th/id/OIP.WIG3L_cbdX-pU21n3WwXjQHaFj?pid=Api&rs=1">
-           </a>
-           <a class="carousel-item" id="imgPro" target="_blank" 
-               href="">
-               <img src="https://cdn.pixabay.com/photo/2014/05/03/00/46/notebook-336634_960_720.jpg">
-           </a>
-           <a class="carousel-item" id="imgPro" target="_blank" 
-               href="">
-               <img src="https://cdn.pixabay.com/photo/2014/05/03/00/46/notebook-336634_960_720.jpg">
-           </a> -->
         </div>
-   </div> 
+   </div>  -->
 </div>
 </div>
 
