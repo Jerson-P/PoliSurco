@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as M from '../../../assets/materialize/js/materialize.js';
+import { AcademicaService } from '../../services/academica.service';
 
 @Component({
   selector: 'app-academica',
@@ -8,15 +9,15 @@ import * as M from '../../../assets/materialize/js/materialize.js';
 })
 export class AcademicaComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor( public academico: AcademicaService ) { }
   ngAfterViewInit(): void {
     let instances = M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
     var instance = M.Tabs.init(document.querySelectorAll('.tabs'), {});
   }
   
   ngOnInit(): void {
-    // let instances = M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
-    // var instance = M.Tabs.init(document.querySelectorAll('.tabs'), {});
+    let instances = M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
+    var instance = M.Tabs.init(document.querySelectorAll('.tabs'), {});
   }
 
 }

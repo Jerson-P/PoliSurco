@@ -1,54 +1,44 @@
 <div class="container">
-
     <!--Collapsible oferta académica-->
     <ul class="collapsible popout">
 
         <!--BACHILLERATO-->
-        <li class="active">
+        <li>
             <div class="collapsible-header">
                 <i class="material-icons">beenhere</i>
                 <h3>Bachillerato</h3>
             </div>
-            <div class="collapsible-body">
-                <h5>Nombre</h5>
-                <blockquote>Lorem ipsum dolor sit amet consectetur.</blockquote>
+            <div class="collapsible-body" *ngFor="let b of academico.datosB">
+                <h5>{{b.nombre}}</h5>
+                <blockquote>{{b.descripcion}}</blockquote>
             </div>
         </li>
 
-        <!--TÉCNICOS-->
+        <!--DIPLOMADOS-->
         <li>
             <div class="collapsible-header">
-                <i class="material-icons">bookmark</i>
-                <h3>Técnicos</h3>
+                <i class="material-icons">note_add</i>
+                <h3>Diplomados</h3>
             </div>
-            <div class="collapsible-body">
+            <div class="collapsible-body" >
 
-                <!--tabla de técnicos-->
-               <ul>
+                  <!--TABLA DIPLOMADOS-->
+               <ul *ngFor="let d of academico.datosD">
                 <div class="card">
-                    <div class="card-content">
-                     <h5>Nombre</h5>
-                      <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                          inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                          non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                          et debitis, illo omnis itaque.
-                        </blockquote>
-                    </div>
-                    <div class="card-tabs">
-                        <ul class="tabs tabs-fixed-width">
-                          <li class="tab"><a class="active" href="#semestres-tec">Semestres</a></li>
-                          <li class="tab"><a  href="#plan-tec">Curriculo</a></li>
-                          <li class="tab"><a href="#costo-tec">Costo</a></li>
-                        </ul>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" [src]="d.plan">
                       </div>
-                      <div class="card-content grey lighten-4">
-                        <div id="semestres-tec">3 Semestres</div>
-                        <div id="plan-tec"><img class="responsive-img center" 
-                            src="../../../assets/img/plan.jpg" alt="Plan">
-                        </div>
-                        <div id="costo-tec">$ 1500000</div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                            <i class="material-icons right">more_vert</i></span>
                       </div>
-                  </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                            <i class="material-icons right">close</i></span>
+                        <blockquote>{{d.info}}</blockquote>
+                        <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                      </div>
+                </div>
                 </ul>
             </div>
         </li>
@@ -63,25 +53,23 @@
 
                  <!--TABLA CURSOS-->
                <ul>
-                <div class="card">
-                    <div class="card-content">
-                     <h5>Nombre</h5>
+                <ul *ngFor="let d of academico.datosC">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" [src]="d.plan">
+                          </div>
+                          <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                                <i class="material-icons right">more_vert</i></span>
+                          </div>
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                                <i class="material-icons right">close</i></span>
+                            <blockquote>{{d.info}}</blockquote>
+                            <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                          </div>
                     </div>
-                    <div class="card-tabs">
-                        <ul class="tabs tabs-fixed-width">
-                          <li class="tab"><a class="active" href="#info-cur">Información</a></li>
-                          <li class="tab"><a  href="#plan-cur">Curriculo</a></li>
-                          <li class="tab"><a href="#costo-cur">Costo</a></li>
-                        </ul>
-                      </div>
-                      <div class="card-content grey lighten-4">
-                        <div id="info-cur"><blockquote>Lorem ipsum dolor sit amet.</blockquote></div>
-                        <div id="plan-cur"><img class="responsive-img center" 
-                            src="../../../assets/img/plan.jpg" alt="Plan">
-                        </div>
-                        <div id="costo-cur">$ 300000</div>
-                      </div>
-                  </div>
+                    </ul>
                 </ul>
             </div>
         </li>
@@ -96,61 +84,27 @@
 
                  <!--TABLA SEMINARIOS-->
                <ul>
-                <div class="card">
-                    <div class="card-content">
-                     <h5>Nombre</h5>
+                <ul *ngFor="let d of academico.datosS">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" [src]="d.plan">
+                          </div>
+                          <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                                <i class="material-icons right">more_vert</i></span>
+                          </div>
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                                <i class="material-icons right">close</i></span>
+                            <blockquote>{{d.info}}</blockquote>
+                            <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                          </div>
                     </div>
-                    <div class="card-tabs">
-                        <ul class="tabs tabs-fixed-width">
-                          <li class="tab"><a class="active" href="#info-sem">Información</a></li>
-                          <li class="tab"><a  href="#plan-sem">Curriculo</a></li>
-                          <li class="tab"><a href="#costo-sem">Costo</a></li>
-                        </ul>
-                      </div>
-                      <div class="card-content grey lighten-4">
-                        <div id="info-sem"><blockquote>Lorem ipsum dolor sit amet.</blockquote></div>
-                        <div id="plan-sem"><img class="responsive-img center" 
-                            src="../../../assets/img/plan.jpg" alt="Plan">
-                        </div>
-                        <div id="costo-sem">$ 300000</div>
-                      </div>
-                  </div>
+                    </ul>
                 </ul>
             </div>
         </li>
 
-        <!--DIPLOMADOS-->
-        <li>
-            <div class="collapsible-header">
-                <i class="material-icons">note_add</i>
-                <h3>Diplomados</h3>
-            </div>
-            <div class="collapsible-body">
-
-                  <!--TABLA DIPLOMADOS-->
-               <ul>
-                <div class="card">
-                    <div class="card-content">
-                     <h5>Nombre</h5>
-                    </div>
-                    <div class="card-tabs">
-                        <ul class="tabs tabs-fixed-width">
-                          <li class="tab"><a class="active" href="#info-dip">Información</a></li>
-                          <li class="tab"><a  href="#plan-dip">Curriculo</a></li>
-                          <li class="tab"><a href="#costo-dip">Costo</a></li>
-                        </ul>
-                      </div>
-                      <div class="card-content grey lighten-4">
-                        <div id="info-dip"><blockquote>Lorem ipsum dolor sit amet.</blockquote></div>
-                        <div id="plan-dip"><img class="responsive-img center" 
-                            src="../../../assets/img/plan.jpg" alt="Plan">
-                        </div>
-                        <div id="costo-dip">$ 300000</div>
-                      </div>
-                  </div>
-                </ul>
-            </div>
-        </li>
 
         <!--CONVENIOS-->
         <li>
@@ -171,15 +125,10 @@
 
                             <!--COLLECTION PREGRADOS-->
                             <ul class="collection">
-                                <li class="collection-item avatar">
-                                    <h5>Nombre</h5>
-                                    <blockquote>Lorem ipsum dolor sit amet.</blockquote>
-                                    <h6>Universidad</h6>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <h5>Nombre</h5>
-                                    <blockquote>Lorem ipsum dolor sit amet.</blockquote>
-                                    <h6>Universidad</h6>
+                                <li class="collection-item avatar" *ngFor="let pre of academico.datosPre">
+                                    <h5>{{pre.nombre}}</h5>
+                                    <blockquote>{{pre.info}}</blockquote>
+                                    <h6>{{pre.universidad}}</h6>
                                 </li>
                             </ul>
                         </div>
@@ -195,19 +144,46 @@
 
                             <!--COLLECTIONS POSGRADOS-->
                             <ul class="collection">
-                                <li class="collection-item avatar">
-                                    <h5>Nombre</h5>
-                                    <blockquote>Lorem ipsum dolor sit amet.</blockquote>
-                                    <h6>Universidad</h6>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <h5>Nombre</h5>
-                                    <blockquote>Lorem ipsum dolor sit amet.</blockquote>
-                                    <h6>Universidad</h6>
+                                <li class="collection-item avatar" *ngFor="let pos of academico.datosPos">
+                                    <h5>{{pos.nombre}}</h5>
+                                    <blockquote>{{pos.info}}</blockquote>
+                                    <h6>{{pos.universidad}}</h6>
                                 </li>
                             </ul>
                         </div>
                     </li>
+                </ul>
+            </div>
+        </li>
+
+
+        <!--TÉCNICOS-->
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">bookmark</i>
+                <h3>Técnicos</h3>
+            </div>
+            <div class="collapsible-body">
+
+                <!--tabla de técnicos-->
+               <ul>
+                <ul *ngFor="let d of academico.datosTec">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" [src]="d.plan">
+                          </div>
+                          <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                                <i class="material-icons right">more_vert</i></span>
+                          </div>
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                                <i class="material-icons right">close</i></span>
+                            <blockquote>{{d.info}}</blockquote>
+                            <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                          </div>
+                    </div>
+                    </ul>
                 </ul>
             </div>
         </li>
