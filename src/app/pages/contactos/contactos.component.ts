@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as M  from '../../../assets/materialize/js/materialize.js';
+import { ContactosService } from '../../services/contactos.service';
 
 @Component({
   selector: 'app-contactos',
@@ -8,7 +9,7 @@ import * as M  from '../../../assets/materialize/js/materialize.js';
 })
 export class ContactosComponent implements OnInit {
 
-  constructor() { }
+  constructor( public urlContactos: ContactosService) { }
 
   ngOnInit(): void {
     let autocomplete = M.Autocomplete.init(document.querySelectorAll('.autocomplete'), {});
