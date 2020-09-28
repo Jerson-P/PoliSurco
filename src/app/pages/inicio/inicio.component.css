@@ -1,11 +1,30 @@
 imgPro{
-    height: 250%;
-    width: 250%;
+    height: 100%;
+    width: 100%;
 }
-.slides li img {
-    background-attachment: fixed;
+#para{
+ background-attachment: fixed;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 svg path,
 svg rect{
     fill: black;
 }
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background-attachment: fixed;
+}
+ 
+.texto-encima{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+

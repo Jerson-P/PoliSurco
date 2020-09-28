@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit} from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input} from '@angular/core';
 import * as M  from '../../../assets/materialize/js/materialize.js';
 import { BannerService } from '../../services/banner.service';
 declare var $: any;
@@ -15,7 +15,11 @@ export class InicioComponent implements OnInit, AfterViewInit {
     indicators: true,
     duration: 1000,
   };
+  page: number = 1;
   public banners = [];
+  p: number = 1;
+
+  // cargando =  true;
 
   constructor( public urlsBanner: BannerService) { 
     
@@ -31,27 +35,16 @@ export class InicioComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-    this.urlsBanner.getBanner().subscribe((banner) => {
-      this.banners = [];
-      banner.forEach((bannerData: any) => {
-      this.banners.push({
-        id: bannerData.payload.doc.id,
-        data: bannerData.payload.doc.data()
-      });
-      this.urlsBanner.cargando = false;
-      })
-    });
-    
-    if (!this.urlsBanner.cargando) {
-      let elems = document.querySelectorAll('.carousel');
-    let instances = M.Carousel.init(elems, this.options);
-    setInterval(function(){
-      $('.carousel').carousel('next');
-    }, 10000);
-      
-    }
-
-    
+    // this.urlsBanner.getBanner().subscribe((banner) => {
+    //   this.banners = [];
+    //   banner.forEach((bannerData: any) => {
+    //   this.banners.push({
+    //     id: bannerData.payload.doc.id,
+    //     data: bannerData.payload.doc.data()
+    //   });
+    //   this.cargando = false;
+    //   })
+    // });
   }
 
 }

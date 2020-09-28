@@ -1,46 +1,44 @@
 <!--Section Banner-->
 <div class="row">
-<div class="section">
-
-    <!-- Prolader  -->
-    <div align="center" *ngIf="urlsBanner.cargando">
-        <h5>Cargando...</h5>
-        <div class="loader loader--style1" title="0">
-          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-          <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
-            s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
-            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
-          <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
-            C22.32,8.481,24.301,9.057,26.013,10.047z">
-            <animateTransform attributeType="xml"
-              attributeName="transform"
-              type="rotate"
-              from="0 20 20"
-              to="360 20 20"
-              dur="0.5s"
-              repeatCount="indefinite"/>
-            </path>
-          </svg>
-        </div>
-        <p>Espere porfavor</p>
-      </div>
-    
-    <div class="carousel carousel-slider" *ngIf="!urlsBanner.cargando">
-        <a class="carousel-item" *ngFor="let img of banners">
-            <img [src]="img.data.url">
-        </a>
-    </div>
-
-    
-   <!-- <div class="container" id="carusel"  *ngIf="!urlsBanner.cargando">
-       <div class="carousel center carousel-slider" *ngFor="let img of banners" >
-            <a class="carousel-item" id="imgPro" >
-                <img [src]="img.data.url">
-            </a>
-        </div>
-   </div>  -->
+<div class="section" *ngIf="!urlsBanner.cargando">
+    <ul>
+        <li *ngFor="let b of urlsBanner.urls 
+                    | paginate: { itemsPerPage: 1, currentPage: p}"> 
+            <div class="col s12">
+                <img [src]="b.url" alt="Banner" class="responsive-img" id="para">
+            </div>
+        </li>
+    </ul> 
+    <pagination-controls (pageChange)="p = ($event)"
+                          responsive="true"
+                          previousLabel="Anterior"
+                          nextLabel="Siguiente">
+    </pagination-controls>
 </div>
+</div>
+
+<!-- Prolader  -->
+<div align="center" *ngIf="urlsBanner.cargando">
+    <h5>Cargando...</h5>
+    <div class="loader loader--style1" title="0">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+      <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+        s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+        c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+      <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+        C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 20 20"
+          to="360 20 20"
+          dur="0.5s"
+          repeatCount="indefinite"/>
+        </path>
+      </svg>
+    </div>
+    <p>Espere porfavor</p>
 </div>
 
 <!--Section Promotion Table-->
@@ -70,26 +68,43 @@
 </div>
 
 
-<!--Section news and slider-->
-<div class="slider">
-    <ul class="slides">
-        <li>
-            <img class="responsive-img" src="https://firebasestorage.googleapis.com/v0/b/polisurco-sas.appspot.com/o/code.png?alt=media&token=02c98d76-0214-4f5c-8ab5-770b5e99a6f3"> 
-            <div class="caption center-align">
-                <h3 class="purple-text text-darken-5">This is our big Tagline!</h3>
-                <h5 class="indigo-text text-accent-3">Here's our small slogan.</h5>
+<!--Section news-->
+<div class="contenedor" *ngIf="!urlsBanner.cargando">
+    <ul>
+        <li *ngFor="let n of urlsBanner.noticias 
+                    | paginate: { itemsPerPage: 1, currentPage: page}"> 
+            <div class="col s12 m8 offset-m2 l6 offset-l3 card-panel teal lighten-2">
+                <div class="card-panel teal lighten-5-4 z-depth-1">
+                  <div class="row valign-wrapper">
+                    <div class="col s5">
+                      <img [src]="n.url" alt="Noticias" class="responsive-img" id="para"> <!-- notice the "circle" class -->
+                    </div>
+                    <div class="col s7">
+                      <h5 class="texto-encima">{{n.titulo}}<br> </h5>
+                      <span class="black-text">
+                        {{n.parrafo}} 
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </li>
-    </ul>
+        </li>
+    </ul> 
+    <pagination-controls (pageChange)="page = ($event)"
+                          responsive="true"
+                          previousLabel="Anterior"
+                          nextLabel="Siguiente">
+    </pagination-controls>
   </div>
 
-
 <!--Section Contact Form-->
-
 <div class="container">
     <div class="section">
         <div class="row">
             <div class="col s12">
+                <blockquote style="text-align: center;">
+                    <h5><b>CONTACTANOS</b></h5>
+                </blockquote>
                 <div class="row">
                   <div class="input-field col s6">
                       <i class="material-icons prefix">account_circle</i>

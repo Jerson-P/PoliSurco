@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CookieService} from 'ngx-cookie-service';
+import {NgxPaginationModule} from 'ngx-pagination'; 
+
 
 //Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -38,7 +40,8 @@ import { from } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    NgxPaginationModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
