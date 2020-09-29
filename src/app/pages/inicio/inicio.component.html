@@ -1,19 +1,21 @@
 <!--Section Banner-->
 <div class="row">
-<div class="section" *ngIf="!urlsBanner.cargando">
-    <ul>
-        <li *ngFor="let b of urlsBanner.urls 
-                    | paginate: { itemsPerPage: 1, currentPage: p}"> 
-            <div class="col s12">
-                <img [src]="b.url" alt="Banner" class="responsive-img" id="para">
-            </div>
-        </li>
-    </ul> 
-    <pagination-controls (pageChange)="p = ($event)"
-                          responsive="true"
-                          previousLabel="Anterior"
-                          nextLabel="Siguiente">
-    </pagination-controls>
+  <div class="container">
+  <div class="slider" slider>
+    <div class="callbacks_container">
+    <ul class="rslides callbacks callbacks1">
+      <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig">
+                        <li ngxSlickItem *ngFor="let u of urlsBanner.urls" class="slide">
+                          <div  class="banner-top" >
+                            <img src={{u.url}} >
+                          </div>
+                        </li>
+    </ngx-slick-carousel>
+    </ul>
+    </div>
+</div> 
 </div>
 </div>
 

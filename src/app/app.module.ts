@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { CookieService} from 'ngx-cookie-service';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+
 
 //Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -41,7 +44,8 @@ import { from } from 'rxjs';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    SlickCarouselModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

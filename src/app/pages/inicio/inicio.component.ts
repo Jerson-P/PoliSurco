@@ -22,8 +22,9 @@ export class InicioComponent implements OnInit, AfterViewInit {
   // cargando =  true;
 
   constructor( public urlsBanner: BannerService) { 
-    
   }
+
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, autoplay:true, "autoplaySpeed":1000};
 
   ngAfterViewInit(): void {
     let slider = M.Slider.init(document.querySelectorAll('.slider'), this.options );
