@@ -65,18 +65,11 @@
             <div class="collapsible-body">
 
                  <!--TABLA CREDITOS-->
-               <ul>
-                <div class="card">
+                <div class="card" *ngFor="let ad of requisitos.admisiones">
                     <div class="card-content">
-                     <h5>Nombre</h5>
-                      <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                          inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                          non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                          et debitis, illo omnis itaque.
-                        </blockquote>
+                      <blockquote>{{ad.credito}}</blockquote>
                     </div>
                 </div>
-                </ul>
             </div>
         </li>
 
@@ -89,14 +82,9 @@
             <div class="collapsible-body">
 
                  <!--TABLA FACILIDADES DE PAGO-->
-               <div class="card">
+               <div class="card" *ngFor="let ad of requisitos.admisiones">
                     <div class="card-content">
-                     <h5>Nombre</h5>
-                      <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                          inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                          non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                          et debitis, illo omnis itaque.
-                        </blockquote>
+                      <blockquote>{{ad.facilidadPago}}</blockquote>
                     </div>
                </div>
             </div>
@@ -111,14 +99,9 @@
             <div class="collapsible-body">
 
                  <!--TABLA DESCUENTOS-->
-               <div class="card">
+               <div class="card" *ngFor="let ad of requisitos.admisiones">
                     <div class="card-content">
-                     <h5>Nombre</h5>
-                      <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit 
-                          inventore cupiditate placeat laudantium, et explicabo amet est illum officiis totam rem 
-                          non! Dolore maiores qui repellendus, commodi ut, aut perferendis suscipit modi sequi earum 
-                          et debitis, illo omnis itaque.
-                        </blockquote>
+                      <blockquote>{{ad.facilidadPago}}</blockquote>
                     </div>
                </div>
             </div>

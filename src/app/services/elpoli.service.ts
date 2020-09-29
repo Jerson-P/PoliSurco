@@ -17,7 +17,6 @@ export class ElpoliService {
 
   getPoli(){
     return this.db.collection('elpolisurco').valueChanges().subscribe((resp: any[]) => {
-      // console.log(resp);
       this.elPoli =  resp;
     });
   }

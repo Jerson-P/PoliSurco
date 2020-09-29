@@ -17,8 +17,6 @@ export class UrlsServicesService {
 
 
   getUrls(){
-    // return this.firestore.collection('urls').valueChanges()
-    // .subscribe(val => console.log(val));
     return this.firestore.collection('urls').valueChanges()
             .subscribe( (resp: any[]) => {
               this.urls =  resp;
