@@ -25,7 +25,6 @@ export class BannerService {
   public getBanner(){
     // return this.db.collection('banner').snapshotChanges();
     this.db.collection('banner').valueChanges().subscribe( (resp: any[]) => {
-      console.log(resp)
       this.urls = resp;
       this.cargando = false;
     });
