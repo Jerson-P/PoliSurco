@@ -1,6 +1,6 @@
 imgPro{
-    height: 100%;
-    width: 100%;
+    height: 250px;
+    width: 250px;
 }
 #para{
  background-attachment: fixed;
@@ -28,5 +28,13 @@ svg rect{
     left: 1%;
 }
 
-
 /*CSS CAROUSEL*/
+.slick-slider {
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    background: #fff;
+}
+.prevarrow{
+    background-image: url(../../../assets/img/espalda.png);
+}

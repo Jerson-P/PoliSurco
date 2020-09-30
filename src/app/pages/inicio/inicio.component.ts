@@ -17,14 +17,12 @@ export class InicioComponent implements OnInit, AfterViewInit {
   };
   page: number = 1;
   public banners = [];
-  p: number = 1;
-
-  // cargando =  true;
+ 
 
   constructor( public urlsBanner: BannerService) { 
   }
 
-  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, autoplay:true, "autoplaySpeed":1000};
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, autoplay:true, "autoplaySpeed":3000};
 
   ngAfterViewInit(): void {
     let slider = M.Slider.init(document.querySelectorAll('.slider'), this.options );
@@ -35,17 +33,10 @@ export class InicioComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    let prev = document.querySelector('slick-prev');
+    prev.textContent = "Atrás";
 
-    // this.urlsBanner.getBanner().subscribe((banner) => {
-    //   this.banners = [];
-    //   banner.forEach((bannerData: any) => {
-    //   this.banners.push({
-    //     id: bannerData.payload.doc.id,
-    //     data: bannerData.payload.doc.data()
-    //   });
-    //   this.cargando = false;
-    //   })
-    // });
+
   }
 
 }
