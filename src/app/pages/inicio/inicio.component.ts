@@ -33,9 +33,8 @@ export class InicioComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    let prev = document.querySelector('slick-prev');
+    let prev = document.querySelector('slickNext');
     prev.textContent = "Atrás";
-
 
   }
 
