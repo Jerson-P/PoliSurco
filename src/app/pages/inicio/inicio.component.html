@@ -1,23 +1,22 @@
 <!--Section Banner-->
-<div class="row">
-  <div class="container">
-  <div class="slider" slider>
+ <div class="container" *ngIf="!urlsBanner.cargando" style="background-image: ;"> 
+  <div class="slider-slider">
     <div class="callbacks_container">
-    <ul class="rslides callbacks callbacks1">
-      <ngx-slick-carousel class="carousel" 
-                        #slickModal="slick-carousel" 
-                        [config]="slideConfig">
-                        <li ngxSlickItem *ngFor="let u of urlsBanner.urls" class="slide">
-                          <div  class="banner-top" >
-                            <img src={{u.url}} >
-                          </div>
-                        </li>
-    </ngx-slick-carousel>
-    </ul>
+      <ul class="rslides callbacks callbacks1">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+            <!-- <li ngxSlickItem *ngFor="let u of urlsBanner.urls" class="slide"> -->
+                <!-- <div  class="banner-top"> -->
+                <div ngxSlickItem *ngFor="let u of urlsBanner.urls" class="slide">
+                  <img src={{u.url}} class="responsive-img" alt="Banner"  >
+                </div>
+            <!-- </li> -->
+        </ngx-slick-carousel>
+      </ul>
     </div>
-</div> 
+  </div>
 </div>
-</div>
+
+
 
 <!-- Prolader  -->
 <div align="center" *ngIf="urlsBanner.cargando">
