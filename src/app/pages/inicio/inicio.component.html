@@ -1,6 +1,3 @@
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-
 
 <!--Section Banner-->
  <div class="container" *ngIf="!urlsBanner.cargando" > 
@@ -119,7 +116,7 @@
                   </div>
                   <div class="input-field col s6">
                     <i class="material-icons prefix">school</i>
-                    <input type="text" id="programa-con" class="autocomplete" required autofocus>
+                    <input type="text" id="programa-inicio" class="autocomplete" required autofocus>
                     <label for="programa-con">Programa de Interes</label>
                   </div>
                 </div>
@@ -147,7 +144,7 @@
                   <input type="tel" class="autocomplete" id="celular-inicio" required>
                   <label for="celular-inicio">Celular</label>
               </div>
-              <div class="col s5">
+              <!-- <div class="col s5">
                   <p class="right-align">
                       <a id="correo-inicio" class="waves-effect waves-light btn tooltipped" type="submit"
                       data-position="left" data-tooltip="Enviar vía Email">
@@ -155,11 +152,11 @@
                           enviar
                        </a>
                   </p>
-              </div>
+              </div> -->
               <div class="col s5">
                 <p class="right-align">
                     <a id="wh-inicio" class="waves-effect waves-light btn tooltipped" data-position="input" 
-                    data-tooltip="Enviar vía WhatsApp" type="click" id="click">
+                    data-tooltip="Enviar vía WhatsApp" type="click">
                         <i class="material-icons right"><img src="../../../assets/img/wh.png" alt="Wh"></i>enviar
                     </a>
                 </p>
@@ -169,21 +166,7 @@
   </div>
 </div>
 </form>
-<script type="text/javascript">
-  $(".box-input input").on("focus", function(){
-      $(this).addClass("focus");
-  });
 
-  $(".box-input input").on("blur", function(){
-      if($(this).val() == ""){
-          $(this).removeClass("focus");
-      }
-  });
-
-</script>
-
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="assets/js/contactowhatsapp.js"></script> 
 
 
 
