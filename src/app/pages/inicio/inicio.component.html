@@ -1,3 +1,7 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+
 <!--Section Banner-->
  <div class="container" *ngIf="!urlsBanner.cargando" > 
   <div class="slider-slider">
@@ -154,10 +158,9 @@
               </div>
               <div class="col s5">
                 <p class="right-align">
-                    <a id="wh-inicio" class="waves-effect waves-light btn tooltipped" data-position="bottom" 
-                    data-tooltip="Enviar vía WhatsApp" type="submit">
-                        <i class="material-icons right"><img src="../../../assets/img/wh.png" alt="Wh"></i>
-                        enviar
+                    <a id="wh-inicio" class="waves-effect waves-light btn tooltipped" data-position="input" 
+                    data-tooltip="Enviar vía WhatsApp" type="click" id="click">
+                        <i class="material-icons right"><img src="../../../assets/img/wh.png" alt="Wh"></i>enviar
                     </a>
                 </p>
                </div>
@@ -166,7 +169,21 @@
   </div>
 </div>
 </form>
+<script type="text/javascript">
+  $(".box-input input").on("focus", function(){
+      $(this).addClass("focus");
+  });
 
+  $(".box-input input").on("blur", function(){
+      if($(this).val() == ""){
+          $(this).removeClass("focus");
+      }
+  });
+
+</script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="assets/js/contactowhatsapp.js"></script> 
 
 
 
