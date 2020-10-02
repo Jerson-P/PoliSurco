@@ -1,6 +1,7 @@
 
 <!--Section Banner-->
- <div class="container imgB" *ngIf="!urlsBanner.cargando" > 
+<div class="responsive-img" id="imgB">
+ <div class="container" *ngIf="!urlsBanner.cargando"> 
   <div class="slider-slider">
     <div class="callbacks_container">
       <ul class="rslides callbacks callbacks1">
@@ -16,6 +17,7 @@
     </div>
   </div>
 </div>
+
 
 
 
@@ -68,6 +70,7 @@
     </div>
 </div>
 </div>
+</div>
 
 
 <!--Section news-->
@@ -76,7 +79,7 @@
         <li *ngFor="let n of urlsBanner.noticias 
                     | paginate: { itemsPerPage: 1, currentPage: page}"> 
               <div class="col s12 m8 offset-m2 l6 offset-l3 card-panel noti">
-                <div class="card-panel" style="background-color: #140ba4;">
+                <div class="card-panel noti" >
                   <div class="row valign-wrapper noti">
                     <div class="col s5">
                       <img [src]="n.url" alt="Noticias" class="responsive-img" id="para"> <!-- notice the "circle" class -->

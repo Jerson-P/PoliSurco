@@ -32,14 +32,16 @@ svg rect{
 .slick-slider {
     width: 100%;
     height: 90%;
-    margin: auto;
-    background: #fff;
+    margin: 0%;
 }
 .prevarrow{
     background-image: url(../../../assets/img/espalda.png);
 }
-.imgB{
+#imgB{
     background-image: url(../../../assets/img/imgMesa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 .btnVer{
     color: #33ff66;
@@ -55,4 +57,5 @@ svg rect{
 }
 .btn{
     background-color: #33ff66;
+    color: #000000;
 }
