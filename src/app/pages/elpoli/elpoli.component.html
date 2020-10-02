@@ -69,8 +69,10 @@
       </div>
       <!--TABLA SIMBOLOS-->
       <div class="collapsible-body">
-          <h5><b>Himno</b></h5>
+        <div id="card">
+          <h5 id="card"><b>Himno</b></h5>
           <blockquote>{{items.himno}}</blockquote>
+        </div>
 
           <div class="row">
             <div class="col s12 m5">
@@ -97,15 +99,17 @@
     </li>
     <!--JURIDICO-->
     <li>
-      <div class="collapsible-header">
+      <div class="collapsible-header" >
           <i class="material-icons">beenhere</i>
           <h4><b>Juridico</b></h4>
       </div>
       <div class="collapsible-body">
-        <ul *ngFor="let juri of elpoli.juridico">
-          <h6>{{juri.titulo}}</h6>
-          <blockquote>{{juri.parrafo}}</blockquote>
+        <div id="card">
+        <ul *ngFor="let juri of elpoli.juridico" >
+          <h5><b>{{juri.titulo}}</b></h5>
+          <blockquote>{{juri.parrafo}}</blockquote><br>
         </ul>
+      </div>
       </div>  
     </li>
   </ul>
