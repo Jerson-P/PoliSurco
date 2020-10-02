@@ -1,4 +1,3 @@
-
 #para{
  background-attachment: fixed;
   height: 100%;
@@ -10,7 +9,7 @@
 }
 svg path,
 svg rect{
-    fill: black;
+    fill: #fe742c;
 }
 .contenedor{
     position: relative;
@@ -35,7 +34,25 @@ svg rect{
     background-image: url(../../../assets/img/espalda.png);
 }
 
-.imgB{
-    background-image: url(/../../../assets/img/fotop_Mesa\de\trabajo\1.png);
+#imgB{
+    background-image: url(../../../assets/img/imgMesa.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.btnVer{
+    color: #33ff66;
+}
+.iconA{
+    color: #140ba4;
+}
+.iconN{
+    color: #fe742c;
+}
+.noti{
+    background-color: #bebeea;
+}
+.btn{
+    background-color: #33ff66;
+    color: #000000;
 }
 
