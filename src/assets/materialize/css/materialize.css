@@ -5102,7 +5102,7 @@ small {
 
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
-  color: #ee6e73;
+  color: black;
 }
 
 .tabs .tab.disabled a,
