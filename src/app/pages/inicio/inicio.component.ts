@@ -21,7 +21,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
  
 
   constructor( public urlsBanner: BannerService) { 
-    
+   
   }
 
   slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, autoplay:true, "autoplaySpeed":3000};
@@ -83,6 +83,5 @@ export class InicioComponent implements OnInit, AfterViewInit {
         if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
     return false;
 }
-
 
 }
