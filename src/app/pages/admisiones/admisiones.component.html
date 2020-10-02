@@ -12,11 +12,11 @@
             <div class="collapsible-body">
 
                  <!--TABLA REQUISITOS-->
-               <div class="card" >
                     <div class="card-content" *ngFor="let r of requisitos.r">
+                    <div class="card" >
                       <blockquote>{{r.requisito}}</blockquote>
                     </div>
-               </div>
+                    </div>
             </div>
         </li>
 
@@ -32,11 +32,12 @@
                 <div class="card">
                     <div class="card-tabs">
                         <ul class="tabs tabs-fixed-width">
-                          <li class="tab"><a class="active" href="#admi">Descargar o llenar en linea</a></li>
+                          <li class="tab"><a class="active" href="#admi"><b>Descargar o llenar en linea</b></a></li>
                         </ul>
                       </div>
                       <div class="card-content grey lighten-4">
                         <div id="admi">
+                            <div id="card">
                             <blockquote>Tienes dos opciones. <br>
                                 - Descarga el formulario para que lo imprimas y lo lleves a nuestras oficinas. <br>
                                 - LLena el formulario en linea y abjunta los demás requisitos a traves de nuestra web.
@@ -49,6 +50,7 @@
                             <a class="waves-effect waves-teal btn right modal-trigger" href="#linea">
                                 LLenar en linea
                             </a>
+                        </div>
                         </div>
                       </div>
                   </div>
