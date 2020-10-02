@@ -1,7 +1,4 @@
-imgPro{
-    height: 250px;
-    width: 250px;
-}
+
 #para{
  background-attachment: fixed;
   height: 100%;
@@ -40,8 +37,7 @@ svg rect{
 #imgB{
     background-image: url(../../../assets/img/imgMesa.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover; 
 }
 .btnVer{
     color: #33ff66;
