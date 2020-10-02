@@ -8,7 +8,7 @@
                 <i class="material-icons">beenhere</i>
                 <h3 style="color: #140ba4;"><b>Bachillerato</b></h3>
             </div>
-            <div class="collapsible-body" *ngFor="let b of academico.datosB">
+            <div class="collapsible-body" id="card" *ngFor="let b of academico.datosB">
                 <div id="card">
                 <h5>{{b.nombre}}</h5>
                 <blockquote>{{b.descripcion}}</blockquote>
@@ -32,13 +32,13 @@
                       </div>
                       <div class="card-content">
                           <div id="card">
-                        <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                        <span class="card-title activator">{{d.nombre}}
                             <i class="material-icons right">more_vert</i></span>
                         </div>
                       </div>
-                      <div class="card-reveal">
+                      <div class="card-reveal" id="card">
                         <div id="card">
-                        <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                        <span class="card-title">{{d.nombre}}
                             <i class="material-icons right">close</i></span>
                         <blockquote>{{d.info}}</blockquote>
                         <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
@@ -65,12 +65,12 @@
                             <img class="activator" [src]="d.plan">
                           </div>
                           <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                            <span class="card-title activator">{{d.nombre}}
                                 <i class="material-icons right">more_vert</i></span>
                           </div>
-                          <div class="card-reveal">
+                          <div class="card-reveal" id="card">
                             <div id="card">
-                            <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                            <span class="card-title">{{d.nombre}}
                                 <i class="material-icons right">close</i></span>
                             <blockquote>{{d.info}}</blockquote>
                             <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
@@ -98,12 +98,12 @@
                             <img class="activator" [src]="d.plan">
                           </div>
                           <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                            <span class="card-title activator ">{{d.nombre}}
                                 <i class="material-icons right">more_vert</i></span>
                           </div>
-                          <div class="card-reveal">
+                          <div class="card-reveal" id="card">
                             <div id="card">
-                            <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                            <span class="card-title">{{d.nombre}}
                                 <i class="material-icons right">close</i></span>
                             <blockquote>{{d.info}}</blockquote>
                             <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
@@ -131,11 +131,11 @@
                             <i class="material-icons">beenhere</i>
                             <h4>Pregrados</h4>
                         </div>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body" id="card">
 
                             <!--COLLECTION PREGRADOS-->
                             <ul class="collection">
-                                <li class="collection-item avatar" *ngFor="let pre of academico.datosPre">
+                                <li class="collection-item avatar" id="card" *ngFor="let pre of academico.datosPre">
                                     <div id="card">
                                     <h5>{{pre.nombre}}</h5>
                                     <blockquote>{{pre.info}}</blockquote>
@@ -152,11 +152,11 @@
                             <i class="material-icons">beenhere</i>
                             <h4>Posgrados</h4>
                         </div>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body" id="card">
 
                             <!--COLLECTIONS POSGRADOS-->
                             <ul class="collection">
-                                <li class="collection-item avatar" *ngFor="let pos of academico.datosPos">
+                                <li class="collection-item avatar" id="card" *ngFor="let pos of academico.datosPos">
                                     <div id="card">
                                     <h5>{{pos.nombre}}</h5>
                                     <blockquote>{{pos.info}}</blockquote>
@@ -187,12 +187,12 @@
                             <img class="activator" [src]="d.plan">
                           </div>
                           <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
+                            <span class="card-title activator">{{d.nombre}}
                                 <i class="material-icons right">more_vert</i></span>
                           </div>
-                          <div class="card-reveal">
+                          <div class="card-reveal" id="card">
                             <div id="card">
-                            <span class="card-title grey-text text-darken-4">{{d.nombre}}
+                            <span class="card-title">{{d.nombre}}
                                 <i class="material-icons right">close</i></span>
                             <blockquote>{{d.info}}</blockquote>
                             <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
