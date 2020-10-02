@@ -39,5 +39,20 @@ svg rect{
     background-image: url(../../../assets/img/espalda.png);
 }
 .imgB{
-    background-image: url(../../../assets/img/fotop_Mesa\ de\ trabajo\ 1.png);
+    background-image: url(../../../assets/img/imgMesa.png);
+}
+.btnVer{
+    color: #33ff66;
+}
+.iconA{
+    color: #140ba4;
+}
+.iconN{
+    color: #fe742c;
+}
+.noti{
+    background-color: #bebeea;
+}
+.btn{
+    background-color: #33ff66;
 }
