@@ -4,3 +4,7 @@ background-color: #bebeea;
 #card{
     background-color: #bebeea;
 }
+svg path,
+svg rect{
+    fill: #fe742c;
+}
