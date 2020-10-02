@@ -9,8 +9,10 @@
                 <h3>Bachillerato</h3>
             </div>
             <div class="collapsible-body" *ngFor="let b of academico.datosB">
+                <div id="card">
                 <h5>{{b.nombre}}</h5>
                 <blockquote>{{b.descripcion}}</blockquote>
+                </div>
             </div>
         </li>
 
@@ -29,14 +31,18 @@
                         <img class="activator" [src]="d.plan">
                       </div>
                       <div class="card-content">
+                          <div id="card">
                         <span class="card-title activator grey-text text-darken-4">{{d.nombre}}
                             <i class="material-icons right">more_vert</i></span>
+                        </div>
                       </div>
                       <div class="card-reveal">
+                        <div id="card">
                         <span class="card-title grey-text text-darken-4">{{d.nombre}}
                             <i class="material-icons right">close</i></span>
                         <blockquote>{{d.info}}</blockquote>
                         <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                        </div>
                       </div>
                 </div>
                 </ul>
@@ -63,10 +69,12 @@
                                 <i class="material-icons right">more_vert</i></span>
                           </div>
                           <div class="card-reveal">
+                            <div id="card">
                             <span class="card-title grey-text text-darken-4">{{d.nombre}}
                                 <i class="material-icons right">close</i></span>
                             <blockquote>{{d.info}}</blockquote>
                             <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                            </div>
                           </div>
                     </div>
                     </ul>
@@ -94,10 +102,12 @@
                                 <i class="material-icons right">more_vert</i></span>
                           </div>
                           <div class="card-reveal">
+                            <div id="card">
                             <span class="card-title grey-text text-darken-4">{{d.nombre}}
                                 <i class="material-icons right">close</i></span>
                             <blockquote>{{d.info}}</blockquote>
                             <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                            </div>
                           </div>
                     </div>
                     </ul>
@@ -126,9 +136,11 @@
                             <!--COLLECTION PREGRADOS-->
                             <ul class="collection">
                                 <li class="collection-item avatar" *ngFor="let pre of academico.datosPre">
+                                    <div id="card">
                                     <h5>{{pre.nombre}}</h5>
                                     <blockquote>{{pre.info}}</blockquote>
                                     <h6>{{pre.universidad}}</h6>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -145,9 +157,11 @@
                             <!--COLLECTIONS POSGRADOS-->
                             <ul class="collection">
                                 <li class="collection-item avatar" *ngFor="let pos of academico.datosPos">
+                                    <div id="card">
                                     <h5>{{pos.nombre}}</h5>
                                     <blockquote>{{pos.info}}</blockquote>
                                     <h6>{{pos.universidad}}</h6>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -177,10 +191,12 @@
                                 <i class="material-icons right">more_vert</i></span>
                           </div>
                           <div class="card-reveal">
+                            <div id="card">
                             <span class="card-title grey-text text-darken-4">{{d.nombre}}
                                 <i class="material-icons right">close</i></span>
                             <blockquote>{{d.info}}</blockquote>
                             <br> <span>Tiene un valor de: ${{d.costo}} COP</span> 
+                            </div>
                           </div>
                     </div>
                     </ul>
