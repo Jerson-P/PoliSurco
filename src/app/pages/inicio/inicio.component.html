@@ -1,6 +1,5 @@
-
-<!--Section Banner-->
- <div class="container imgB" *ngIf="!urlsBanner.cargando" > 
+<div id="imgB"> <!--Section Banner-->
+ <div class="container" *ngIf="!urlsBanner.cargando"> 
   <div class="slider-slider">
     <div class="callbacks_container">
       <ul class="rslides callbacks callbacks1">
@@ -16,6 +15,7 @@
     </div>
   </div>
 </div>
+
 
 
 
@@ -49,23 +49,24 @@
     <div class="row">
         <div class="col s12 m4">
             <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons medium">flash_on</i></h2>
+                <h2 class="center brown-text"><i class="material-icons medium iconN">flash_on</i></h2>
                 <h5 class="center"><b>Velocidad para comprar</b></h5> 
             </div>
             </div>
         <div class="col s12 m4">
             <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons medium">flash_on</i></h2>
+                <h2 class="center brown-text"><i class="material-icons medium iconN">flash_on</i></h2>
                 <h5 class="center"><b>Velocidad para comprar</b></h5> 
             </div>
         </div>
         <div class="col s12 m4">
             <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons medium">flash_on</i></h2>
+                <h2 class="center brown-text"><i class="material-icons medium iconN">flash_on</i></h2>
                 <h5 class="center"><b>Velocidad para comprar</b></h5> 
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 
@@ -75,9 +76,9 @@
     <ul>
         <li *ngFor="let n of urlsBanner.noticias 
                     | paginate: { itemsPerPage: 1, currentPage: page}"> 
-              <div class="col s12 m8 offset-m2 l6 offset-l3 card-panel teal lighten-2">
-                <div class="card-panel teal lighten-5-4 z-depth-1">
-                  <div class="row valign-wrapper">
+              <div class="col s12 m8 offset-m2 l6 offset-l3 card-panel noti">
+                <div class="card-panel noti" >
+                  <div class="row valign-wrapper noti">
                     <div class="col s5">
                       <img [src]="n.url" alt="Noticias" class="responsive-img" id="para"> <!-- notice the "circle" class -->
                     </div>
@@ -106,16 +107,16 @@
         <div class="row">
             <div class="col s12">
                 <blockquote style="text-align: center;">
-                    <h5><b>CONTACTANOS</b></h5>
+                    <h5 style="color: #140ba4;"><b>CONTACTANOS</b></h5>
                 </blockquote>
                 <div class="row">
                   <div class="input-field col s6">
-                      <i class="material-icons prefix">account_circle</i>
+                      <i class="material-icons prefix iconA">account_circle</i>
                       <input type="text" id="nombre-inicio" class="autocomplete" required autofocus>
                       <label for="nombre-inicio">Nombre</label>
                   </div>
                   <div class="input-field col s6">
-                    <i class="material-icons prefix">school</i>
+                    <i class="material-icons prefix iconA">school</i>
                     <input type="text" id="programa-inicio" class="autocomplete" required autofocus>
                     <label for="programa-con">Programa de Interes</label>
                   </div>
@@ -125,12 +126,12 @@
         <div class="col s12">
           <div class="row">
             <div class="input-field col s6">
-                <i class="material-icons prefix">email</i>
+                <i class="material-icons prefix iconA">email</i>
                 <input type="email" id="email-inicio" class="autocomplete" required>
                 <label for="email-inicio">Email</label>
             </div>
             <div class="input-field col s6">
-              <i class="material-icons prefix">textsms</i>
+              <i class="material-icons prefix iconA">textsms</i>
               <textarea id="mensaje-inicio" class="materialize-textarea" 
               data-length="250" required ></textarea>
               <label for="mensaje-inicio">Mensaje</label>
@@ -140,19 +141,10 @@
       <div class="col s12">
           <div class="row">
               <div class="input-field col s6">
-                  <i class="material-icons prefix">phone_android</i>
+                  <i class="material-icons prefix iconA">phone_android</i>
                   <input type="tel" class="autocomplete" id="celular-inicio" required>
                   <label for="celular-inicio">Celular</label>
               </div>
-              <!-- <div class="col s5">
-                  <p class="right-align">
-                      <a id="correo-inicio" class="waves-effect waves-light btn tooltipped" type="submit"
-                      data-position="left" data-tooltip="Enviar vía Email">
-                          <i class="material-icons right">email</i>
-                          enviar
-                       </a>
-                  </p>
-              </div> -->
               <div class="col s5">
                 <p class="right-align">
                     <a id="wh-inicio" class="waves-effect waves-light btn tooltipped" data-position="input" 

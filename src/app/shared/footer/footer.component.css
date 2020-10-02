@@ -2,6 +2,11 @@ iframe{
     width: 250px;
     height:200px; 
     border:0;
-    border-radius: 10px;
-    
+    border-radius: 10px; 
+}
+.btnVer{
+    background-color: #33ff66;
+}
+#cUno{
+    background-color: #fe742c;
 }

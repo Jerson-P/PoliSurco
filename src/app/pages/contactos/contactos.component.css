@@ -1,3 +1,18 @@
 div.title{
     text-align: center;
 }
+#imgB{
+    background-image: url(../../../assets/img/imgMesa.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.c{
+    background-color: #bebeea;
+}
+.n{
+    color: #fe742c;
+}
+.btnV{
+    background-color: #33ff66;
+    color: black;
+}

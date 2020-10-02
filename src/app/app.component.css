@@ -16,9 +16,10 @@ h1 {
    
 .bcgrdp {
   cursor: pointer;
+  color: #000000;
 }
 .alert{
-  background-color: #dedddd;
+  background-color: #bebeea;
   
 }
 div.alert.alert-warning.grdp{
@@ -46,5 +47,9 @@ svg rect{
 #verde{
   color: #33ff66;
 }
+.btnVer{
+  background-color: #33ff66;
+}
+
 
 
