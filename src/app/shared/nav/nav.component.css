@@ -1,7 +1,17 @@
 .sidenav{
     width: 200px;
- }
+    background-color: #140ba4;
+    
+}
  #logoMov{
      width: 60px;
      height: 60px;
+     background-color: #fe742c;
  }
+i.icon-na{
+    color: #fe742c;
+  }
+#backAzul{
+    background-color: #140ba4;
+}
+
