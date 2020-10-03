@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/POLISURCOSAS",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
