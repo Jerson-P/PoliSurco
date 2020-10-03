@@ -39,11 +39,8 @@ export class InicioComponent implements OnInit, AfterViewInit {
     var btn = document.querySelector('#wh-inicio');
     const urlDesktop = 'https://web.whatsapp.com/';
     const urlMobile = 'whatsapp://';
-    const telefono = '573123885467';
+    const telefono = '573235747527';
     btn.addEventListener('click', (e) => {
-      console.log("Hola");
-      
-      // console.log(nombreVal);
       setTimeout(() => {
       const nombre: HTMLInputElement = document.getElementById('nombre-inicio') as HTMLInputElement
       const nombreVal:  String = nombre.value;
