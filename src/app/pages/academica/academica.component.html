@@ -129,7 +129,7 @@
                     <li>
                         <div class="collapsible-header">
                             <i class="material-icons">beenhere</i>
-                            <h4>Pregrados</h4>
+                            <h4 style="color: #140ba4;">Pregrados</h4>
                         </div>
                         <div class="collapsible-body" id="card">
 
@@ -137,9 +137,9 @@
                             <ul class="collection">
                                 <li class="collection-item avatar" id="card" *ngFor="let pre of academico.datosPre">
                                     <div id="card">
-                                    <h5>{{pre.nombre}}</h5>
-                                    <p>{{pre.info}}</p>
-                                    <h6>{{pre.universidad}}</h6>
+                                    <blockquote>{{pre.nombre}}</blockquote>
+                                    <p>- {{pre.info}}</p>
+                                    <h6>- {{pre.universidad}}</h6>
                                     </div>
                                 </li>
                             </ul>
@@ -150,7 +150,7 @@
                     <li>
                         <div class="collapsible-header">
                             <i class="material-icons">beenhere</i>
-                            <h4>Posgrados</h4>
+                            <h4 style="color: #140ba4;" >Posgrados</h4>
                         </div>
                         <div class="collapsible-body" id="card">
 
@@ -158,9 +158,9 @@
                             <ul class="collection">
                                 <li class="collection-item avatar" id="card" *ngFor="let pos of academico.datosPos">
                                     <div id="card">
-                                    <h5>{{pos.nombre}}</h5>
-                                    <p>{{pos.info}}</p>
-                                    <h6>{{pos.universidad}}</h6>
+                                    <blockquote>{{pos.nombre}}</blockquote>
+                                    <p>- {{pos.info}}</p>
+                                    <h6>- {{pos.universidad}}</h6>
                                     </div>
                                 </li>
                             </ul>
