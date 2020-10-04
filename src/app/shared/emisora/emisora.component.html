@@ -6,7 +6,13 @@
            <div class="col s12 m3 10" id="emisora">
             <h4 class="az">Escuchas Polisurco Vibra Digital.</h4><br>
             <audio controls autoplay class="btnVer"> 
-                <source src="{{urls.emisora}}"  type="audio/ogg" /> 
+                <source src="{{urls.emisora}}"  type="audio/ogg">
+                <source src="{{urls.emisora}}" type="audio/mpeg">
+                <source src="{{urls.emisora}}" type="audio/wav">
+                    <p>
+                        Tú navegador no soporta HTML5 Audio.
+                        Escuchanos en: <a href="{{urls.emisora}}"></a>
+                      </p>
             </audio> 
            </div> 
             <!--TITLE H1-->

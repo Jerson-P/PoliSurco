@@ -32,7 +32,7 @@
         <h4 style="color: #140ba4;"><b>Sobre nosotros</b></h4>
       </div>
       <div class="collapsible-body" id="card">
-       <blockquote>{{items.presentacion}}</blockquote>
+       <blockquote id="card">{{items.presentacion}}</blockquote>
        <img src="assets/img/logo.jpg" alt="Logo" class="responsive-img"
        style="height: auto; width: auto;">
       </div>
@@ -49,15 +49,15 @@
           <div class="card">
               <div class="card-content">
               <h5><b>Misión</b></h5>
-                <blockquote>{{items.mision}}</blockquote>
+                <blockquote id="card">{{items.mision}}</blockquote>
               </div>
               <div class="card-content">
                 <h5><b>Visión</b></h5>
-                  <blockquote>{{items.vision}}</blockquote>
+                  <blockquote id="card">{{items.vision}}</blockquote>
               </div>
               <div class="card-content">
                 <h5><b>Historia</b></h5>
-                  <blockquote>{{items.historia}}</blockquote>
+                  <blockquote id="card">{{items.historia}}</blockquote>
               </div>
             </div>
           </ul>
@@ -73,7 +73,7 @@
       <div class="collapsible-body" id="card">
         <div id="card">
           <h5 id="card"><b>Himno</b></h5>
-          <blockquote>{{items.himno}}</blockquote>
+          <blockquote id="card">{{items.himno}}</blockquote>
         </div>
 
           <div class="row">
@@ -109,7 +109,7 @@
         <div id="card">
         <ul *ngFor="let juri of elpoli.juridico" >
           <h5><b>{{juri.titulo}}</b></h5>
-          <blockquote>{{juri.parrafo}}</blockquote><br>
+          <blockquote id="card">{{juri.parrafo}}</blockquote><br>
         </ul>
       </div>
       </div>  

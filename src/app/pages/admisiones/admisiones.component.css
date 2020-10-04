@@ -19,12 +19,15 @@
     width: auto;
 }
 .card-content{
-    background-color: #bebeea;
+    background-color: #9cdaef;;
 }
 #card{
-    background-color: #bebeea;
+    background-color: #9cdaef;
 }
 .btnVer{
     background-color: #33ff66;
     color: #000000;
+}
+blockquote{
+    background-color: #9cdaef;
 }
