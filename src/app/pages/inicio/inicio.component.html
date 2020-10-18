@@ -1,167 +1,241 @@
-<div id="imgB"> <!--Section Banner-->
- <div class="container" *ngIf="!urlsBanner.cargando"> 
-  <div class="slider-slider">
-    <div class="callbacks_container">
-      <ul class="rslides callbacks callbacks1">
-        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+<div id="imgB">
+  <!--Section Banner-->
+  <div class="r" *ngIf="!urlsBanner.cargando">
+    <div class="slider-slider">
+      <div class="callbacks_container">
+        <ul class="rslides callbacks callbacks1">
+          <ngx-slick-carousel
+            class="carousel"
+            #slickModal="slick-carousel"
+            [config]="slideConfig"
+          >
             <!-- <li ngxSlickItem *ngFor="let u of urlsBanner.urls" class="slide"> -->
-                <!-- <div  class="banner-top"> -->
-                <div ngxSlickItem *ngFor="let u of urlsBanner.urls" class="slide">
-                  <img src={{u.url}} class="responsive-img" alt="Banner"  >
-                </div>
+            <!-- <div  class="banner-top"> -->
+            <div ngxSlickItem *ngFor="let u of urlsBanner.urls" class="slide">
+              <img src="{{ u.url }}" class="responsive-img" alt="Banner" />
+            </div>
             <!-- </li> -->
-        </ngx-slick-carousel>
-      </ul>
+          </ngx-slick-carousel>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
-
-
-
-<!-- Prolader  -->
-<div align="center" *ngIf="urlsBanner.cargando">
+  <!-- Prolader  -->
+  <div align="center" *ngIf="urlsBanner.cargando">
     <h5>Cargando...</h5>
     <div class="loader loader--style1" title="0">
-      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-       width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-      <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+      <svg
+        version="1.1"
+        id="loader-1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="40px"
+        height="40px"
+        viewBox="0 0 40 40"
+        enable-background="new 0 0 40 40"
+        xml:space="preserve"
+      >
+        <path
+          opacity="0.2"
+          fill="#000"
+          d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
         s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
-        c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
-      <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
-        C22.32,8.481,24.301,9.057,26.013,10.047z">
-        <animateTransform attributeType="xml"
-          attributeName="transform"
-          type="rotate"
-          from="0 20 20"
-          to="360 20 20"
-          dur="0.5s"
-          repeatCount="indefinite"/>
+        c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"
+        />
+        <path
+          fill="#000"
+          d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+        C22.32,8.481,24.301,9.057,26.013,10.047z"
+        >
+          <animateTransform
+            attributeType="xml"
+            attributeName="transform"
+            type="rotate"
+            from="0 20 20"
+            to="360 20 20"
+            dur="0.5s"
+            repeatCount="indefinite"
+          />
         </path>
       </svg>
     </div>
     <p>Espere porfavor</p>
-</div>
+  </div>
 
-<!--Section Promotion Table-->
-<div class="container">
+  <!--Section Promotion Table-->
+  <div class="container">
     <div class="section">
-    <div class="row">
+      <div class="row">
         <div class="col s12 m4">
-            <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons medium iconN">flash_on</i></h2>
-                <h5 class="center"><b>POLISURCO SAS. Tu mejor opción en educación</b></h5> 
-            </div>
-            </div>
-        <div class="col s12 m4">
-            <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons medium iconN">flash_on</i></h2>
-                <h5 class="center"><b>Promovemos el desarrollo y las competencias en nuestra región</b></h5> 
-            </div>
+          <div class="icon-block">
+            <h2 class="center brown-text">
+              <i class="material-icons medium iconN">flash_on</i>
+            </h2>
+            <h5 class="center">
+              <b>POLISURCO SAS. Tu mejor opción en educación</b>
+            </h5>
+          </div>
         </div>
         <div class="col s12 m4">
-            <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons medium iconN">flash_on</i></h2>
-                <h5 class="center"><b>Soluciones Educativas
-                  Cartagena del Chairá Caquetá</b></h5> 
-            </div>
+          <div class="icon-block">
+            <h2 class="center brown-text">
+              <i class="material-icons medium iconN">flash_on</i>
+            </h2>
+            <h5 class="center">
+              <b
+                >Promovemos el desarrollo y las competencias en nuestra
+                región</b
+              >
+            </h5>
+          </div>
         </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text">
+              <i class="material-icons medium iconN">flash_on</i>
+            </h2>
+            <h5 class="center">
+              <b>Soluciones Educativas Cartagena del Chairá Caquetá</b>
+            </h5>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-</div>
-</div>
-
 
 <!--Section news-->
 <div class="contenedor" *ngIf="!urlsBanner.cargando">
-    <ul>
-        <li *ngFor="let n of urlsBanner.noticias 
-                    | paginate: { itemsPerPage: 1, currentPage: page}"> 
-              <div class="col s12 m8 offset-m2 l6 offset-l3 card-panel noti">
-                <div class="card-panel noti" >
-                  <div class="row valign-wrapper noti">
-                    <div class="col s5">
-                      <img [src]="n.url" alt="Noticias" class="responsive-img" id="para"> <!-- notice the "circle" class -->
-                    </div>
-                    <div class="col s7">
-                      <h5 class="texto-encima">{{n.titulo}}<br> </h5>
-                      <span class="black-text">
-                        {{n.parrafo}} 
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </li>
-    </ul> 
-    <pagination-controls (pageChange)="page = ($event)"
-                          responsive="true"
-                          previousLabel="Anterior"
-                          nextLabel="Siguiente">
-    </pagination-controls>
-  </div>
+  <ul>
+    <li
+      *ngFor="
+        let n of urlsBanner.noticias
+          | paginate: { itemsPerPage: 1, currentPage: page }
+      "
+    >
+      <div class="col s12 m8 offset-m2 l6 offset-l3 card-panel noti">
+        <div class="card-panel noti">
+          <div class="row valign-wrapper noti">
+            <div class="col s5">
+              <img
+                [src]="n.url"
+                alt="Noticias"
+                class="responsive-img"
+                id="para"
+              />
+              <!-- notice the "circle" class -->
+            </div>
+            <div class="col s7">
+              <h5 class="texto-encima">{{ n.titulo }}<br /></h5>
+              <span class="black-text">
+                {{ n.parrafo }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <pagination-controls
+    (pageChange)="page = $event"
+    responsive="true"
+    previousLabel="Anterior"
+    nextLabel="Siguiente"
+  >
+  </pagination-controls>
+</div>
 
 <!--Section Contact Form-->
 <form action="" id="formulario-inicio">
   <div class="container">
     <div class="section">
-        <div class="row">
-            <div class="col s12">
-                <blockquote style="text-align: center; background-color: #fff">
-                    <h5 style="color: #140ba4;"><b>CONTÁCTANOS</b></h5>
-                </blockquote>
-                <div class="row">
-                  <div class="input-field col s6">
-                      <i class="material-icons prefix iconA">account_circle</i>
-                      <input type="text" id="nombre-inicio" class="autocomplete" required autofocus>
-                      <label for="nombre-inicio">Nombre</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <i class="material-icons prefix iconA">school</i>
-                    <input type="text" id="programa-inicio" class="autocomplete" required autofocus>
-                    <label for="programa-con">Programa</label>
-                  </div>
-                </div>
-            </div>
-        </div>
+      <div class="row">
         <div class="col s12">
+          <blockquote style="text-align: center; background-color: #fff">
+            <h5 style="color: #140ba4"><b>CONTÁCTANOS</b></h5>
+          </blockquote>
           <div class="row">
             <div class="input-field col s6">
-                <i class="material-icons prefix iconA">email</i>
-                <input type="email" id="email-inicio" class="autocomplete" required>
-                <label for="email-inicio">Email</label>
+              <i class="material-icons prefix iconA">account_circle</i>
+              <input
+                type="text"
+                id="nombre-inicio"
+                class="autocomplete"
+                required
+                autofocus
+              />
+              <label for="nombre-inicio">Nombre</label>
             </div>
             <div class="input-field col s6">
-              <i class="material-icons prefix iconA">textsms</i>
-              <textarea id="mensaje-inicio" class="materialize-textarea" 
-              data-length="250" required ></textarea>
-              <label for="mensaje-inicio">Mensaje</label>
+              <i class="material-icons prefix iconA">school</i>
+              <input
+                type="text"
+                id="programa-inicio"
+                class="autocomplete"
+                required
+                autofocus
+              />
+              <label for="programa-con">Programa</label>
             </div>
           </div>
+        </div>
       </div>
       <div class="col s12">
-          <div class="row">
-              <div class="input-field col s6">
-                  <i class="material-icons prefix iconA">phone_android</i>
-                  <input type="tel" class="autocomplete" id="celular-inicio" required>
-                  <label for="celular-inicio">Celular</label>
-              </div>
-              <div class="col s5">
-                <p class="right-align">
-                    <a id="wh-inicio" class="waves-effect waves-light btn tooltipped" data-position="input" 
-                    data-tooltip="Enviar vía WhatsApp" type="click">
-                        <i class="material-icons right"><img src="assets/img/wh.png" alt="Wh"></i>enviar
-                    </a>
-                </p>
-               </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix iconA">email</i>
+            <input
+              type="email"
+              id="email-inicio"
+              class="autocomplete"
+              required
+            />
+            <label for="email-inicio">Email</label>
           </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix iconA">textsms</i>
+            <textarea
+              id="mensaje-inicio"
+              class="materialize-textarea"
+              data-length="250"
+              required
+            ></textarea>
+            <label for="mensaje-inicio">Mensaje</label>
+          </div>
+        </div>
       </div>
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix iconA">phone_android</i>
+            <input
+              type="tel"
+              class="autocomplete"
+              id="celular-inicio"
+              required
+            />
+            <label for="celular-inicio">Celular</label>
+          </div>
+          <div class="col s5">
+            <p class="right-align">
+              <a
+                id="wh-inicio"
+                class="waves-effect waves-light btn tooltipped"
+                data-position="input"
+                data-tooltip="Enviar vía WhatsApp"
+                type="click"
+              >
+                <i class="material-icons right"
+                  ><img src="assets/img/wh.png" alt="Wh" /></i
+                >enviar
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 </form>
-
-
-
-
-
-
