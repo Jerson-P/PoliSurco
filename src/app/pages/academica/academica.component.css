@@ -7,8 +7,11 @@ h3{
     font-size: 200%;
 }
 .card{
-    background-color: #bebeea;
+    background-color: #9cdaef;
 }
 #card{
-        background-color: #bebeea;
+        background-color: #9cdaef;
+}
+blockquote{
+    background-color: #9cdaef;
 }

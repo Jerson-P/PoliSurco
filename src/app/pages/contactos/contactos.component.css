@@ -5,9 +5,10 @@ div.title{
     background-image: url(../../../assets/img/imgMesa.png);
     background-repeat: no-repeat;
     background-size: cover; 
+    
 }
 .c{
-    background-color: #bebeea;
+    background-color: #9cdaef;
 }
 .n{
     color: #fe742c;

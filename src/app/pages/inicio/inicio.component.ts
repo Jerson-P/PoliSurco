@@ -54,8 +54,8 @@ export class InicioComponent implements OnInit, AfterViewInit {
       const celVal: string = cel.value;
       let mensaje = 'send?phone=' + telefono + '&text=*Quiero estudiar en el POLISURCOS:*%0A*¿Cual es tu nombre?*%0A'
                      + nombreVal + '%0A*¿Programa de interes?*%0A' + programaVal 
-                     + '%0A*¿Tú email?*%0A' + emailVal + '%0A*¿TúAMensaje?*%0A' + msmVal 
-                     + '*%0A*¿Tú Celular?*%0A' + celVal +'';
+                     + '%0A*¿Tú email?*%0A' + emailVal + '%0A*¿Tú Mensaje?*%0A' + msmVal 
+                     + '%0A*¿Tú Celular?*%0A' + celVal +'';
       if (this.isMobile()) {
         window.open(urlMobile + mensaje, '_blank');
       }else{

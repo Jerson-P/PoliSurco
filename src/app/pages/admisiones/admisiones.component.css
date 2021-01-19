@@ -14,17 +14,20 @@
     top: 0;
     width: 100%;
 }
-.modal{
-    height: auto;
-    width: auto;
-}
+/* .modal{
+    height: 90%;
+    width: 90%;
+} */
 .card-content{
-    background-color: #bebeea;
+    background-color: #9cdaef;;
 }
 #card{
-    background-color: #bebeea;
+    background-color: #9cdaef;
 }
 .btnVer{
     background-color: #33ff66;
     color: #000000;
+}
+blockquote{
+    background-color: #9cdaef;
 }

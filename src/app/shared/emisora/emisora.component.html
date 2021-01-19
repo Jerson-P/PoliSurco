@@ -1,41 +1,71 @@
 <header *ngFor="let urls of urlsServicesService.urls">
-    <br>
-    <div class="container">
-        <div class="row">
-            <!--EMISORA-->
-           <div class="col s12 m3 10" id="emisora">
-            <h4 class="az">Escuchas Polisurco Vibra Digital.</h4><br>
-            <audio controls autoplay class="btnVer"> 
-                <source src="{{urls.emisora}}"  type="audio/ogg" /> 
-            </audio> 
-           </div> 
-            <!--TITLE H1-->
-            <div class="col s12 m6 10">
-            <h1 class="az">Politecnico del sur de Colombia S.A.S 
-            <h5 class="az"> Soluciones Educativas<br>Cartagena del Chairá Caquetá</h5>
-            </h1>
-            </div>
-            <!--BOTONES REDES SOCIALES-->
-           <div class="col s12 m3 10">
-               <br>
-               <h5 class="az">Redes Sociales</h5>
-            <ul> 
-                <a class="btn-floating pulse btnVer" href="{{urls.instagram}}"
-                id="cDos" target="_blank"><i class="material-icons">
-                    <img src="assets/img/intagram.png" alt="IN"></i>
-                </a>
-                &nbsp;
-                <a class="btn-floating pulse btnVer" href="{{urls.facebook}}"
-                id="cDos" target="_blank"><i class="material-icons">
-                    <img src="assets/img/fb.png" alt="FB"></i>
-                </a>
-                &nbsp;
-                <a class="btn-floating pulse btnVer" href="https://wa.me/573202729242?text=Me%20Interesa%20Realizar%20Mis%20Estudios%20En%20El%20Polisurco"
-                id="cDos" target="_blank"><i class="material-icons">
-                    <img src="assets/img/wh.png" alt="Wh"></i>
-                </a>
-              </ul>
-           </div>
-        </div>
+  <br />
+  <div class="container">
+    <div class="row">
+      <!--EMISORA-->
+      <div class="col s12 m3 10" id="emisora">
+        <img
+          src="assets/img/logo.jpg"
+          alt="Logo"
+          class="responsive-img"
+          style="height: auto; width: auto"
+        />
+        <audio controls autoplay class="btnVer">
+          <source src="{{ urls.emisora }}" type="audio/ogg" />
+          <source src="{{ urls.emisora }}" type="audio/mpeg" />
+          <source src="{{ urls.emisora }}" type="audio/wav" />
+          <p>
+            Tú navegador no soporta HTML5 Audio. Escuchanos en:
+            <a href="{{ urls.emisora }}"></a>
+          </p>
+        </audio>
+        <h4 class="az">Escuchas Polisurco Vibra Digital.</h4>
+      </div>
+      <!--TITLE H1-->
+      <div class="col s12 m6 10">
+        <h1 class="az">
+          Politécnico del sur de Colombia S.A.S
+          <h5 class="az">
+            Soluciones Educativas<br />Cartagena del Chairá Caquetá
+          </h5>
+        </h1>
+      </div>
+      <!--BOTONES REDES SOCIALES-->
+      <div class="col s12 m3 10">
+        <br />
+        <h5 class="az">Redes Sociales</h5>
+        <ul>
+          <a
+            class="btn-floating pulse btnVer"
+            href="{{ urls.instagram }}"
+            id="cDos"
+            target="_blank"
+            ><i class="material-icons">
+              <img src="assets/img/intagram.png" alt="IN"
+            /></i>
+          </a>
+          &nbsp;
+          <a
+            class="btn-floating pulse btnVer"
+            href="{{ urls.facebook }}"
+            id="cDos"
+            target="_blank"
+            ><i class="material-icons">
+              <img src="assets/img/fb.png" alt="FB"
+            /></i>
+          </a>
+          &nbsp;
+          <a
+            class="btn-floating pulse btnVer"
+            href="https://wa.me/573202729242?text=Me%20Interesa%20Realizar%20Mis%20Estudios%20En%20El%20Polisurco"
+            id="cDos"
+            target="_blank"
+            ><i class="material-icons">
+              <img src="assets/img/wh.png" alt="Wh"
+            /></i>
+          </a>
+        </ul>
+      </div>
     </div>
+  </div>
 </header>

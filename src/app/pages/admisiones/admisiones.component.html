@@ -1,119 +1,124 @@
 <div class="container">
+  <!--Collapsible Admisiones-->
+  <ul class="collapsible popout">
+    <!--REQUISITOS-->
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">border_color</i>
+        <h4 style="color: #140ba4"><b>Requisitos</b></h4>
+      </div>
+      <div class="collapsible-body" id="card">
+        <!--TABLA REQUISITOS-->
+        <div class="card-content" *ngFor="let r of requisitos.r">
+          <div class="card">
+            <blockquote>{{ r.requisito }}</blockquote>
+          </div>
+        </div>
+      </div>
+    </li>
 
-    <!--Collapsible Admisiones-->
-    <ul class="collapsible popout">
-
-        <!--REQUISITOS-->
-        <li>
-            <div class="collapsible-header">
-                <i class="material-icons">border_color</i>
-                <h4 style="color: #140ba4;"><b>Requisitos</b></h4>
+    <!--FORMULARIO ADMISIONES-->
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">bookmark</i>
+        <h4 style="color: #140ba4"><b>Formulario Admisiones</b></h4>
+      </div>
+      <div class="collapsible-body">
+        <!--tabla de Descargar-->
+        <ul>
+          <div class="card">
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab">
+                  <a class="active" href="#admi"
+                    ><b>Descargar o llenar en línea</b></a
+                  >
+                </li>
+              </ul>
             </div>
-            <div class="collapsible-body" id="card">
-
-                 <!--TABLA REQUISITOS-->
-                    <div class="card-content" *ngFor="let r of requisitos.r">
-                    <div class="card" >
-                      <blockquote>{{r.requisito}}</blockquote>
-                    </div>
-                    </div>
-            </div>
-        </li>
-
-        <!--FORMULARIO ADMISIONES-->
-        <li>
-            <div class="collapsible-header">
-                <i class="material-icons">bookmark</i>
-                <h4 style="color: #140ba4;"><b>Formulario Admisiones</b></h4>
-            </div>
-            <div class="collapsible-body">
-                <!--tabla de Descargar-->
-               <ul>
-                <div class="card">
-                    <div class="card-tabs">
-                        <ul class="tabs tabs-fixed-width">
-                          <li class="tab"><a class="active" href="#admi"><b>Descargar o llenar en línea</b></a></li>
-                        </ul>
-                      </div>
-                      <div class="card-content grey lighten-4">
-                        <div id="admi">
-                            <div id="card">
-                            <blockquote>Tienes dos opciones. <br>
-                                - Descarga el formulario para que lo imprimas y lo lleves a nuestras oficinas.  <br>
-                                - Llenar el formulario en línea y adjunta los demás requisitos a través de nuestra web.
-                              </blockquote>
-                            <a  class="waves-effect waves-teal btn btnVer col s6" 
-                            href="assets/pdfs/InscripciónPolisurco.pdf" download="FormularioPolisurco">
-                            Descargar
-                            </a> 
-                            &nbsp;
-                            <a class="waves-effect waves-teal btn right modal-trigger btnVer col s6" 
-                            href="#linea">LLenar
-                            </a>
-                        </div>
-                        </div>
-                      </div>
-                  </div>
-                </ul>
-            </div>
-        </li>
-
-        <!--CRÉDITOS-->
-        <li>
-            <div class="collapsible-header">
-                <i class="material-icons">bookmark_border</i>
-                <h4 style="color: #140ba4;"><b>Créditos</b></h4>
-            </div>
-            <div class="collapsible-body" id="card">
-
-                 <!--TABLA CREDITOS-->
-                <div class="card" *ngFor="let ad of requisitos.admisiones">
-                    <div class="card-content">
-                      <blockquote>{{ad.credito}}</blockquote>
-                    </div>
+            <div class="card-content">
+              <div id="admi">
+                <div id="card">
+                  <blockquote>
+                    Tienes dos opciones. <br />
+                    - Descarga el formulario para que lo imprimas y lo lleves a
+                    nuestras oficinas. <br />
+                    - Llenar el formulario en línea y adjunta los demás
+                    requisitos a través de nuestra web.
+                  </blockquote>
+                  <a
+                    class="waves-effect waves-teal btn btnVer col s6"
+                    href="assets/pdfs/InscripciónPolisurco.pdf"
+                    download="FormularioPolisurco"
+                  >
+                    Descargar
+                  </a>
+                  &nbsp;
+                  <a
+                    class="waves-effect waves-teal btn right modal-trigger btnVer col s6"
+                    href="https://docs.google.com/forms/u/2/d/e/1FAIpQLSfz3suJUQnHGPjA07en-THpc8zVIniXgvpC378k2zznvEyvNQ/viewform"
+                    target="_blank"
+                    >LLenar
+                  </a>
                 </div>
+              </div>
             </div>
-        </li>
+          </div>
+        </ul>
+      </div>
+    </li>
 
-        <!--FACILIDADES DE PAGO-->
-        <li>
-            <div class="collapsible-header">
-                <i class="material-icons">border_color</i>
-                <h4 style="color: #140ba4;"><b>Facilidades de pago</b></h4>
-            </div>
-            <div class="collapsible-body" id="card">
+    <!--CRÉDITOS-->
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">bookmark_border</i>
+        <h4 style="color: #140ba4"><b>Créditos</b></h4>
+      </div>
+      <div class="collapsible-body" id="card">
+        <!--TABLA CREDITOS-->
+        <div class="card" *ngFor="let ad of requisitos.admisiones">
+          <div class="card-content">
+            <blockquote>{{ ad.credito }}</blockquote>
+          </div>
+        </div>
+      </div>
+    </li>
 
-                 <!--TABLA FACILIDADES DE PAGO-->
-               <div class="card" *ngFor="let ad of requisitos.admisiones">
-                    <div class="card-content">
-                      <blockquote>{{ad.facilidadPago}}</blockquote>
-                    </div>
-               </div>
-            </div>
-        </li>
+    <!--FACILIDADES DE PAGO-->
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">border_color</i>
+        <h4 style="color: #140ba4"><b>Facilidades de pago</b></h4>
+      </div>
+      <div class="collapsible-body" id="card">
+        <!--TABLA FACILIDADES DE PAGO-->
+        <div class="card" *ngFor="let ad of requisitos.admisiones">
+          <div class="card-content">
+            <blockquote>{{ ad.facilidadPago }}</blockquote>
+          </div>
+        </div>
+      </div>
+    </li>
 
-         <!--DESCUENTOS-->
-         <li>
-            <div class="collapsible-header">
-                <i class="material-icons">border_color</i>
-                <h4 style="color: #140ba4;"><b>Descuentos</b></h4>
-            </div>
-            <div class="collapsible-body" id="card">
-
-                 <!--TABLA DESCUENTOS-->
-               <div class="card" *ngFor="let ad of requisitos.admisiones">
-                    <div class="card-content">
-                      <blockquote>{{ad.facilidadPago}}</blockquote>
-                    </div>
-               </div>
-            </div>
-        </li>
-         
-       
-    </ul>
+    <!--DESCUENTOS-->
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">border_color</i>
+        <h4 style="color: #140ba4"><b>Descuentos</b></h4>
+      </div>
+      <div class="collapsible-body" id="card">
+        <!--TABLA DESCUENTOS-->
+        <div class="card" *ngFor="let ad of requisitos.admisiones">
+          <div class="card-content">
+            <blockquote>{{ ad.facilidadPago }}</blockquote>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
 
-<!--MODAL FORMULARIO EN LINEA-->
+<!-- MODAL FORMULARIO EN LINEA
 <div id="linea" class="modal">
     <div class="modal-content">
         <div class="iframe-container">
@@ -122,4 +127,4 @@
         </iframe>
         </div>
     </div>
-</div>
+</div> -->
