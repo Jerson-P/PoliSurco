@@ -44,3 +44,54 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/angular
+# Edit at https://www.toptal.com/developers/gitignore?templates=angular
+
+### Angular ###
+## Angular ##
+# compiled output
+dist/
+tmp/
+app/**/*.js
+app/**/*.js.map
+
+# dependencies
+node_modules/
+bower_components/
+
+# IDEs and editors
+.idea/
+
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+# System Files
+.DS_Store/
+
+# End of https://www.toptal.com/developers/gitignore/api/angular
+
+# Created by https://www.toptal.com/developers/gitignore/api/firebase
+# Edit at https://www.toptal.com/developers/gitignore?templates=firebase
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+
+# End of https://www.toptal.com/developers/gitignore/api/firebas ok
